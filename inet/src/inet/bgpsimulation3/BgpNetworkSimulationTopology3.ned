@@ -1,6 +1,9 @@
 package inet.bgpsimulation3;
 
+import inet.examples.bgpv4.BgpOpen.BGPRouterSimple;
+import inet.node.ethernet.Eth10G;
 import inet.common.misc.ThruputMeteringChannel;
+import inet.examples.bgpv4.BgpUpdate.BGPRouterEx;
 import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
 import inet.node.ethernet.EtherSwitch;
 import inet.node.inet.StandardHost;
@@ -8,10 +11,11 @@ import inet.node.ospfv2.OspfRouter;
 import inet.visualizer.integrated.IntegratedCanvasVisualizer;
 import inet.bgpsimulation3.myBgpRouter;
 
+
 network BgpNetworkSimulationTopology3
 {
     types:
-        
+
         channel LINK_1G extends ThruputMeteringChannel
         {
             parameters:
@@ -20,7 +24,7 @@ network BgpNetworkSimulationTopology3
                 displayAsTooltip = true;
                 thruputDisplayFormat = "#N";
         }
-        
+
         channel FIBRE_4G extends ThruputMeteringChannel
         {
             parameters:
@@ -29,7 +33,7 @@ network BgpNetworkSimulationTopology3
                 displayAsTooltip = true;
                 thruputDisplayFormat = "#N";
         }
-        
+
     submodules:
         visualizer: IntegratedCanvasVisualizer {
             parameters:
@@ -47,13 +51,31 @@ network BgpNetworkSimulationTopology3
             parameters:
                 @display("p=696,307");
             gates:
-                pppg[2];
+                pppg[3];
         }
         A2: myBgpRouter {
             parameters:
                 @display("p=848,311");
             gates:
                 pppg[2];
+        }
+        D1: myBgpRouter {
+            parameters:
+                @display("p=437,366");
+            gates:
+                pppg[2];
+        }
+        D2: myBgpRouter {
+			parameters:
+                @display("p=292,443");
+            gates:
+                pppg[2];
+        }
+        D3: myBgpRouter {
+            parameters:
+                @display("p=179,382");
+            gates:
+                pppg[1];
         }
         B: myBgpRouter {
             parameters:
@@ -217,5 +239,10 @@ network BgpNetworkSimulationTopology3
         A1.pppg[0] <--> FIBRE_4G <--> B.pppg[0];
         A2.pppg[0] <--> FIBRE_4G <--> C.pppg[0];
         B.pppg[2] <--> FIBRE_4G <--> C.pppg[3];
+        D1.pppg[0] <--> FIBRE_4G <--> A1.pppg[2];
+        D2.pppg[0] <--> FIBRE_4G <--> D3.pppg[0];
+        D2.pppg[1] <--> FIBRE_4G <--> D1.pppg[1];
+
+
 }
 

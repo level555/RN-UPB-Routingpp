@@ -22,6 +22,12 @@
         <Router interAddr="10.30.2.254"/> <!--router C-->
     </AS>
 
+	<AS id="31812">
+		<Router interAddr="10.40.1.254"/> <!--router D1-->
+		<Router interAddr="10.40.2.254"/> <!--router D2-->
+		<Router interAddr="10.40.3.254"/> <!--router D3-->
+	</AS>
+
    <Session id="1">
         <Router exterAddr = "10.10.10.1"/> <!--router A1-->
         <Router exterAddr = "10.10.10.2"/> <!--router B-->
@@ -35,6 +41,20 @@
     <Session id="3">
         <Router exterAddr = "10.10.20.1"/> <!--router C-->
         <Router exterAddr = "10.10.20.2"/> <!--router B-->
+    </Session>
+    
+    <Session id="4">
+        <Router exterAddr = "10.10.10.3"/> router D1
+        <Router exterAddr = "10.10.10.4"/> router A1 
+    </Session>
+    
+    <Session id="5">
+        <Router exterAddr = "10.10.10.5"/> router D2
+        <Router exterAddr = "10.10.10.7"/> router D3
+    </Session>
+    <Session id="6">
+        <Router exterAddr = "10.10.10.3"/> router D1
+        <Router exterAddr = "10.10.10.6"/> router D2
     </Session>
 
 </BGPConfig>

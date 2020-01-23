@@ -1,7 +1,12 @@
 <config>
+<!--   For BGP connection A1 - B -->
   <interface hosts='A1' 	names='ppp0' address='10.10.10.1' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
+<!--   For BGP connection A1 - RA1 -->
   <interface hosts='A1' 	names='ppp1' address='10.10.1.254' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
-  
+<!--   For BGP connection A1 - D -->
+  <interface hosts='A1' 	names='ppp2' address='10.10.10.4' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
+    
+ 
   <interface hosts='A2' 	names='ppp0' address='10.10.11.1' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
   <interface hosts='A2' 	names='ppp1' address='10.10.3.254' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
   
@@ -9,10 +14,24 @@
   <interface hosts='B' 		names='ppp1' address='10.20.1.254' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
   <interface hosts='B' 		names='ppp2' address='10.10.20.2' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
   
-  <interface hosts='C' 		names='ppp0' address='10.10.11.2' 		netmask='255.255.255.0' mtu='1500' metric='1'/>
-  <interface hosts='C' 		names='ppp1' address='10.30.1.255' 		netmask='255.255.255.0' mtu='1500' metric='1'/>
+  <interface hosts='C' 		names='ppp0' address='10.10.11.2' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' mtu='1500' metric='1'/>
+  <interface hosts='C' 		names='ppp1' address='10.30.1.255' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' mtu='1500' metric='1'/>
   <interface hosts='C' 		names='ppp2' address='10.30.2.254' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
   <interface hosts='C' 		names='ppp3' address='10.10.20.1' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
+  
+<!--   For BGP connection A1 - D1 -->
+  <interface hosts='D1'		names='ppp0' address='10.10.10.3' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
+<!--   For BGP connection D1 - D2 -->
+  <interface hosts='D1'		names='ppp1' address='10.10.10.8' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
+  
+<!--   FOR BGP CONNECTION D2 - D3 -->
+  <interface hosts='D2'		names='ppp0' address='10.10.10.5' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
+<!--   For BGP connection D1 - D2 -->
+  <interface hosts='D2'		names='ppp1' address='10.10.10.6' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
+  
+<!--   For BGP connection D3 - D2 -->
+  <interface hosts='D3'		names='ppp0' address='10.10.10.7' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
+    
   
   <interface hosts='RA1' 	names='ppp0' address='10.10.1.255' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
   <interface hosts='RA1' 	names='ppp1' address='10.10.2.255' 		netmask='255.255.255.0' groups='224.0.0.1 224.0.0.2 224.0.0.5' metric='1'/>
