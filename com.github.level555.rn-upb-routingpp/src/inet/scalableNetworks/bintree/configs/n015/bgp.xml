@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- https://inet.omnetpp.org/docs/users-guide/ch-routing.html -->
+<BGPConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="BGP.xsd">
+	
+	<!-- "may" contain -->
+    <TimerParams>
+        <connectRetryTime> 120 </connectRetryTime>
+        <holdTime> 180 </holdTime>
+        <keepAliveTime> 60 </keepAliveTime>
+        <startDelay> 15 </startDelay>
+    </TimerParams>
+
+	<AS id='1'> <!-- 0.1<-->1.0 -->
+		<Router interAddr='10.10.1.2'/>
+	</AS>
+	<AS id='2'> <!-- 0.1<-->1.0 -->
+		<Router interAddr='10.10.1.1'/>
+	</AS>
+	<Session id='1'> <!-- 0.1<-->1.0 -->
+		<Router exterAddr='10.10.1.2'/>
+		<Router exterAddr='10.10.1.1'/>
+	</Session>
+	<AS id='3'> <!-- 0.2<-->2.0 -->
+		<Router interAddr='10.10.2.1'/>
+	</AS>
+	<Session id='2'> <!-- 0.2<-->2.0 -->
+		<Router exterAddr='10.10.2.3'/>
+		<Router exterAddr='10.10.2.1'/>
+	</Session>
+	<AS id='4'> <!-- 1.1<-->3.0 -->
+		<Router interAddr='10.10.3.2'/>
+	</AS>
+	<Session id='3'> <!-- 1.1<-->3.0 -->
+		<Router exterAddr='10.10.3.4'/>
+		<Router exterAddr='10.10.3.2'/>
+	</Session>
+	<AS id='5'> <!-- 1.2<-->4.0 -->
+		<Router interAddr='10.10.4.2'/>
+	</AS>
+	<Session id='4'> <!-- 1.2<-->4.0 -->
+		<Router exterAddr='10.10.4.5'/>
+		<Router exterAddr='10.10.4.2'/>
+	</Session>
+	<AS id='6'> <!-- 2.1<-->5.0 -->
+		<Router interAddr='10.10.5.3'/>
+	</AS>
+	<Session id='5'> <!-- 2.1<-->5.0 -->
+		<Router exterAddr='10.10.5.6'/>
+		<Router exterAddr='10.10.5.3'/>
+	</Session>
+	<AS id='7'> <!-- 2.2<-->6.0 -->
+		<Router interAddr='10.10.6.3'/>
+	</AS>
+	<Session id='6'> <!-- 2.2<-->6.0 -->
+		<Router exterAddr='10.10.6.7'/>
+		<Router exterAddr='10.10.6.3'/>
+	</Session>
+	<AS id='8'> <!-- 3.1<-->7.0 -->
+		<Router interAddr='10.10.7.4'/>
+	</AS>
+	<Session id='7'> <!-- 3.1<-->7.0 -->
+		<Router exterAddr='10.10.7.8'/>
+		<Router exterAddr='10.10.7.4'/>
+	</Session>
+	<AS id='9'> <!-- 3.2<-->8.0 -->
+		<Router interAddr='10.10.8.4'/>
+	</AS>
+	<Session id='8'> <!-- 3.2<-->8.0 -->
+		<Router exterAddr='10.10.8.9'/>
+		<Router exterAddr='10.10.8.4'/>
+	</Session>
+	<AS id='10'> <!-- 4.1<-->9.0 -->
+		<Router interAddr='10.10.9.5'/>
+	</AS>
+	<Session id='9'> <!-- 4.1<-->9.0 -->
+		<Router exterAddr='10.10.9.10'/>
+		<Router exterAddr='10.10.9.5'/>
+	</Session>
+	<AS id='11'> <!-- 4.2<-->10.0 -->
+		<Router interAddr='10.10.10.5'/>
+	</AS>
+	<Session id='10'> <!-- 4.2<-->10.0 -->
+		<Router exterAddr='10.10.10.11'/>
+		<Router exterAddr='10.10.10.5'/>
+	</Session>
+	<AS id='12'> <!-- 5.1<-->11.0 -->
+		<Router interAddr='10.10.11.6'/>
+	</AS>
+	<Session id='11'> <!-- 5.1<-->11.0 -->
+		<Router exterAddr='10.10.11.12'/>
+		<Router exterAddr='10.10.11.6'/>
+	</Session>
+	<AS id='13'> <!-- 5.2<-->12.0 -->
+		<Router interAddr='10.10.12.6'/>
+	</AS>
+	<Session id='12'> <!-- 5.2<-->12.0 -->
+		<Router exterAddr='10.10.12.13'/>
+		<Router exterAddr='10.10.12.6'/>
+	</Session>
+	<AS id='14'> <!-- 6.1<-->13.0 -->
+		<Router interAddr='10.10.13.7'/>
+	</AS>
+	<Session id='13'> <!-- 6.1<-->13.0 -->
+		<Router exterAddr='10.10.13.14'/>
+		<Router exterAddr='10.10.13.7'/>
+	</Session>
+	<AS id='15'> <!-- 6.2<-->14.0 -->
+		<Router interAddr='10.10.14.7'/>
+	</AS>
+	<Session id='14'> <!-- 6.2<-->14.0 -->
+		<Router exterAddr='10.10.14.15'/>
+		<Router exterAddr='10.10.14.7'/>
+	</Session>
+
+
+</BGPConfig>
+

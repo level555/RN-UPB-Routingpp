@@ -1,0 +1,7 @@
+<config>
+	<interface hosts='node[0]' names='ppp1' address='10.10.1.2' netmask='255.255.255.0' /> <!-- 0.1<-->1.0 -->
+	<interface hosts='node[1]' names='ppp0' address='10.10.1.1' netmask='255.255.255.0' /> <!-- 0.1<-->1.0 -->
+	<interface hosts='node[0]' names='ppp2' address='10.10.2.3' netmask='255.255.255.0' /> <!-- 0.2<-->2.0 -->
+	<interface hosts='node[2]' names='ppp0' address='10.10.2.1' netmask='255.255.255.0' /> <!-- 0.2<-->2.0 -->
+
+</config>
