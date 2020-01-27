@@ -2,5 +2,6 @@
 
 # Usage
 1. Install inet
-2. move inet project into repo workdir (without overwrite)
-3. done
+2. Import project
+3. eclipse -> project properties -> project references -> inet x
+4. done

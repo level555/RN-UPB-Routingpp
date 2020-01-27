@@ -11,9 +11,6 @@
 /bin/
 /3rdparty/
 /.gdbinit.py
-/.nedexclusions
-/.nedfolders
-/.oppbuildspec
 /.oppfeatures
 /CREDITS
 /INSTALL
@@ -23,5 +20,3 @@
 /Version
 /WHATSNEW
 /setenv
-/.cproject
-/.settings/
