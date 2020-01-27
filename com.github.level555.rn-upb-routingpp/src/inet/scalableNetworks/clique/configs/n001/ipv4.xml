@@ -1,0 +1,3 @@
+<config>
+	<interface hosts='node[0]' names='ppp0' address='10.10.1.1' netmask='255.255.255.0' />
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<OSPFASConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OSPF.xsd">
+
+	<!-- interfaceMode= NoOSPF: the interface is not advertized by OSPF Passive: the interface is advertised, but no OSPF message is send out-->
+    <Router name="*" RFC1583Compatible="true">
+	    <BroadcastInterface ifName="*" interfaceMode="NoOSPF" />
+    </Router>
+
+</OSPFASConfig>

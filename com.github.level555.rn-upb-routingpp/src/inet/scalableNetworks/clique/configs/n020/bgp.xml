@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- https://inet.omnetpp.org/docs/users-guide/ch-routing.html -->
+<BGPConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="BGP.xsd">
+	
+	<!-- "may" contain -->
+    <TimerParams>
+        <connectRetryTime> 120 </connectRetryTime>
+        <holdTime> 180 </holdTime>
+        <keepAliveTime> 60 </keepAliveTime>
+        <startDelay> 15 </startDelay>
+    </TimerParams>
+
+	<AS id='1'> <!-- 0.1<-->1.0 -->
+		<Router interAddr='10.10.1.2'/>
+	</AS>
+	<AS id='2'> <!-- 0.1<-->1.0 -->
+		<Router interAddr='10.10.1.1'/>
+	</AS>
+	<Session id='1'> <!-- 0.1<-->1.0 -->
+		<Router exterAddr='10.10.1.2'/>
+		<Router exterAddr='10.10.1.1'/>
+	</Session>
+	<AS id='3'> <!-- 0.2<-->2.0 -->
+		<Router interAddr='10.10.2.1'/>
+	</AS>
+	<Session id='2'> <!-- 0.2<-->2.0 -->
+		<Router exterAddr='10.10.2.3'/>
+		<Router exterAddr='10.10.2.1'/>
+	</Session>
+	<AS id='4'> <!-- 0.3<-->3.0 -->
+		<Router interAddr='10.10.3.1'/>
+	</AS>
+	<Session id='3'> <!-- 0.3<-->3.0 -->
+		<Router exterAddr='10.10.3.4'/>
+		<Router exterAddr='10.10.3.1'/>
+	</Session>
+	<AS id='5'> <!-- 0.4<-->4.0 -->
+		<Router interAddr='10.10.4.1'/>
+	</AS>
+	<Session id='4'> <!-- 0.4<-->4.0 -->
+		<Router exterAddr='10.10.4.5'/>
+		<Router exterAddr='10.10.4.1'/>
+	</Session>
+	<AS id='6'> <!-- 0.5<-->5.0 -->
+		<Router interAddr='10.10.5.1'/>
+	</AS>
+	<Session id='5'> <!-- 0.5<-->5.0 -->
+		<Router exterAddr='10.10.5.6'/>
+		<Router exterAddr='10.10.5.1'/>
+	</Session>
+	<AS id='7'> <!-- 0.6<-->6.0 -->
+		<Router interAddr='10.10.6.1'/>
+	</AS>
+	<Session id='6'> <!-- 0.6<-->6.0 -->
+		<Router exterAddr='10.10.6.7'/>
+		<Router exterAddr='10.10.6.1'/>
+	</Session>
+	<AS id='8'> <!-- 0.7<-->7.0 -->
+		<Router interAddr='10.10.7.1'/>
+	</AS>
+	<Session id='7'> <!-- 0.7<-->7.0 -->
+		<Router exterAddr='10.10.7.8'/>
+		<Router exterAddr='10.10.7.1'/>
+	</Session>
+	<AS id='9'> <!-- 0.8<-->8.0 -->
+		<Router interAddr='10.10.8.1'/>
+	</AS>
+	<Session id='8'> <!-- 0.8<-->8.0 -->
+		<Router exterAddr='10.10.8.9'/>
+		<Router exterAddr='10.10.8.1'/>
+	</Session>
+	<AS id='10'> <!-- 0.9<-->9.0 -->
+		<Router interAddr='10.10.9.1'/>
+	</AS>
+	<Session id='9'> <!-- 0.9<-->9.0 -->
+		<Router exterAddr='10.10.9.10'/>
+		<Router exterAddr='10.10.9.1'/>
+	</Session>
+	<AS id='11'> <!-- 0.10<-->10.0 -->
+		<Router interAddr='10.10.10.1'/>
+	</AS>
+	<Session id='10'> <!-- 0.10<-->10.0 -->
+		<Router exterAddr='10.10.10.11'/>
+		<Router exterAddr='10.10.10.1'/>
+	</Session>
+	<AS id='12'> <!-- 0.11<-->11.0 -->
+		<Router interAddr='10.10.11.1'/>
+	</AS>
+	<Session id='11'> <!-- 0.11<-->11.0 -->
+		<Router exterAddr='10.10.11.12'/>
+		<Router exterAddr='10.10.11.1'/>
+	</Session>
+	<AS id='13'> <!-- 0.12<-->12.0 -->
+		<Router interAddr='10.10.12.1'/>
+	</AS>
+	<Session id='12'> <!-- 0.12<-->12.0 -->
+		<Router exterAddr='10.10.12.13'/>
+		<Router exterAddr='10.10.12.1'/>
+	</Session>
+	<AS id='14'> <!-- 0.13<-->13.0 -->
+		<Router interAddr='10.10.13.1'/>
+	</AS>
+	<Session id='13'> <!-- 0.13<-->13.0 -->
+		<Router exterAddr='10.10.13.14'/>
+		<Router exterAddr='10.10.13.1'/>
+	</Session>
+	<AS id='15'> <!-- 0.14<-->14.0 -->
+		<Router interAddr='10.10.14.1'/>
+	</AS>
+	<Session id='14'> <!-- 0.14<-->14.0 -->
+		<Router exterAddr='10.10.14.15'/>
+		<Router exterAddr='10.10.14.1'/>
+	</Session>
+	<AS id='16'> <!-- 0.15<-->15.0 -->
+		<Router interAddr='10.10.15.1'/>
+	</AS>
+	<Session id='15'> <!-- 0.15<-->15.0 -->
+		<Router exterAddr='10.10.15.16'/>
+		<Router exterAddr='10.10.15.1'/>
+	</Session>
+	<AS id='17'> <!-- 0.16<-->16.0 -->
+		<Router interAddr='10.10.16.1'/>
+	</AS>
+	<Session id='16'> <!-- 0.16<-->16.0 -->
+		<Router exterAddr='10.10.16.17'/>
+		<Router exterAddr='10.10.16.1'/>
+	</Session>
+	<AS id='18'> <!-- 0.17<-->17.0 -->
+		<Router interAddr='10.10.17.1'/>
+	</AS>
+	<Session id='17'> <!-- 0.17<-->17.0 -->
+		<Router exterAddr='10.10.17.18'/>
+		<Router exterAddr='10.10.17.1'/>
+	</Session>
+	<AS id='19'> <!-- 0.18<-->18.0 -->
+		<Router interAddr='10.10.18.1'/>
+	</AS>
+	<Session id='18'> <!-- 0.18<-->18.0 -->
+		<Router exterAddr='10.10.18.19'/>
+		<Router exterAddr='10.10.18.1'/>
+	</Session>
+	<AS id='20'> <!-- 0.19<-->19.0 -->
+		<Router interAddr='10.10.19.1'/>
+	</AS>
+	<Session id='19'> <!-- 0.19<-->19.0 -->
+		<Router exterAddr='10.10.19.20'/>
+		<Router exterAddr='10.10.19.1'/>
+	</Session>
+	<Session id='20'> <!-- 1.2<-->2.1 -->
+		<Router exterAddr='10.10.20.3'/>
+		<Router exterAddr='10.10.20.2'/>
+	</Session>
+	<Session id='21'> <!-- 1.3<-->3.1 -->
+		<Router exterAddr='10.10.21.4'/>
+		<Router exterAddr='10.10.21.2'/>
+	</Session>
+	<Session id='22'> <!-- 1.4<-->4.1 -->
+		<Router exterAddr='10.10.22.5'/>
+		<Router exterAddr='10.10.22.2'/>
+	</Session>
+	<Session id='23'> <!-- 1.5<-->5.1 -->
+		<Router exterAddr='10.10.23.6'/>
+		<Router exterAddr='10.10.23.2'/>
+	</Session>
+	<Session id='24'> <!-- 1.6<-->6.1 -->
+		<Router exterAddr='10.10.24.7'/>
+		<Router exterAddr='10.10.24.2'/>
+	</Session>
+	<Session id='25'> <!-- 1.7<-->7.1 -->
+		<Router exterAddr='10.10.25.8'/>
+		<Router exterAddr='10.10.25.2'/>
+	</Session>
+	<Session id='26'> <!-- 1.8<-->8.1 -->
+		<Router exterAddr='10.10.26.9'/>
+		<Router exterAddr='10.10.26.2'/>
+	</Session>
+	<Session id='27'> <!-- 1.9<-->9.1 -->
+		<Router exterAddr='10.10.27.10'/>
+		<Router exterAddr='10.10.27.2'/>
+	</Session>
+	<Session id='28'> <!-- 1.10<-->10.1 -->
+		<Router exterAddr='10.10.28.11'/>
+		<Router exterAddr='10.10.28.2'/>
+	</Session>
+	<Session id='29'> <!-- 1.11<-->11.1 -->
+		<Router exterAddr='10.10.29.12'/>
+		<Router exterAddr='10.10.29.2'/>
+	</Session>
+	<Session id='30'> <!-- 1.12<-->12.1 -->
+		<Router exterAddr='10.10.30.13'/>
+		<Router exterAddr='10.10.30.2'/>
+	</Session>
+	<Session id='31'> <!-- 1.13<-->13.1 -->
+		<Router exterAddr='10.10.31.14'/>
+		<Router exterAddr='10.10.31.2'/>
+	</Session>
+	<Session id='32'> <!-- 1.14<-->14.1 -->
+		<Router exterAddr='10.10.32.15'/>
+		<Router exterAddr='10.10.32.2'/>
+	</Session>
+	<Session id='33'> <!-- 1.15<-->15.1 -->
+		<Router exterAddr='10.10.33.16'/>
+		<Router exterAddr='10.10.33.2'/>
+	</Session>
+	<Session id='34'> <!-- 1.16<-->16.1 -->
+		<Router exterAddr='10.10.34.17'/>
+		<Router exterAddr='10.10.34.2'/>
+	</Session>
+	<Session id='35'> <!-- 1.17<-->17.1 -->
+		<Router exterAddr='10.10.35.18'/>
+		<Router exterAddr='10.10.35.2'/>
+	</Session>
+	<Session id='36'> <!-- 1.18<-->18.1 -->
+		<Router exterAddr='10.10.36.19'/>
+		<Router exterAddr='10.10.36.2'/>
+	</Session>
+	<Session id='37'> <!-- 1.19<-->19.1 -->
+		<Router exterAddr='10.10.37.20'/>
+		<Router exterAddr='10.10.37.2'/>
+	</Session>
+	<Session id='38'> <!-- 2.3<-->3.2 -->
+		<Router exterAddr='10.10.38.4'/>
+		<Router exterAddr='10.10.38.3'/>
+	</Session>
+	<Session id='39'> <!-- 2.4<-->4.2 -->
+		<Router exterAddr='10.10.39.5'/>
+		<Router exterAddr='10.10.39.3'/>
+	</Session>
+	<Session id='40'> <!-- 2.5<-->5.2 -->
+		<Router exterAddr='10.10.40.6'/>
+		<Router exterAddr='10.10.40.3'/>
+	</Session>
+	<Session id='41'> <!-- 2.6<-->6.2 -->
+		<Router exterAddr='10.10.41.7'/>
+		<Router exterAddr='10.10.41.3'/>
+	</Session>
+	<Session id='42'> <!-- 2.7<-->7.2 -->
+		<Router exterAddr='10.10.42.8'/>
+		<Router exterAddr='10.10.42.3'/>
+	</Session>
+	<Session id='43'> <!-- 2.8<-->8.2 -->
+		<Router exterAddr='10.10.43.9'/>
+		<Router exterAddr='10.10.43.3'/>
+	</Session>
+	<Session id='44'> <!-- 2.9<-->9.2 -->
+		<Router exterAddr='10.10.44.10'/>
+		<Router exterAddr='10.10.44.3'/>
+	</Session>
+	<Session id='45'> <!-- 2.10<-->10.2 -->
+		<Router exterAddr='10.10.45.11'/>
+		<Router exterAddr='10.10.45.3'/>
+	</Session>
+	<Session id='46'> <!-- 2.11<-->11.2 -->
+		<Router exterAddr='10.10.46.12'/>
+		<Router exterAddr='10.10.46.3'/>
+	</Session>
+	<Session id='47'> <!-- 2.12<-->12.2 -->
+		<Router exterAddr='10.10.47.13'/>
+		<Router exterAddr='10.10.47.3'/>
+	</Session>
+	<Session id='48'> <!-- 2.13<-->13.2 -->
+		<Router exterAddr='10.10.48.14'/>
+		<Router exterAddr='10.10.48.3'/>
+	</Session>
+	<Session id='49'> <!-- 2.14<-->14.2 -->
+		<Router exterAddr='10.10.49.15'/>
+		<Router exterAddr='10.10.49.3'/>
+	</Session>
+	<Session id='50'> <!-- 2.15<-->15.2 -->
+		<Router exterAddr='10.10.50.16'/>
+		<Router exterAddr='10.10.50.3'/>
+	</Session>
+	<Session id='51'> <!-- 2.16<-->16.2 -->
+		<Router exterAddr='10.10.51.17'/>
+		<Router exterAddr='10.10.51.3'/>
+	</Session>
+	<Session id='52'> <!-- 2.17<-->17.2 -->
+		<Router exterAddr='10.10.52.18'/>
+		<Router exterAddr='10.10.52.3'/>
+	</Session>
+	<Session id='53'> <!-- 2.18<-->18.2 -->
+		<Router exterAddr='10.10.53.19'/>
+		<Router exterAddr='10.10.53.3'/>
+	</Session>
+	<Session id='54'> <!-- 2.19<-->19.2 -->
+		<Router exterAddr='10.10.54.20'/>
+		<Router exterAddr='10.10.54.3'/>
+	</Session>
+	<Session id='55'> <!-- 3.4<-->4.3 -->
+		<Router exterAddr='10.10.55.5'/>
+		<Router exterAddr='10.10.55.4'/>
+	</Session>
+	<Session id='56'> <!-- 3.5<-->5.3 -->
+		<Router exterAddr='10.10.56.6'/>
+		<Router exterAddr='10.10.56.4'/>
+	</Session>
+	<Session id='57'> <!-- 3.6<-->6.3 -->
+		<Router exterAddr='10.10.57.7'/>
+		<Router exterAddr='10.10.57.4'/>
+	</Session>
+	<Session id='58'> <!-- 3.7<-->7.3 -->
+		<Router exterAddr='10.10.58.8'/>
+		<Router exterAddr='10.10.58.4'/>
+	</Session>
+	<Session id='59'> <!-- 3.8<-->8.3 -->
+		<Router exterAddr='10.10.59.9'/>
+		<Router exterAddr='10.10.59.4'/>
+	</Session>
+	<Session id='60'> <!-- 3.9<-->9.3 -->
+		<Router exterAddr='10.10.60.10'/>
+		<Router exterAddr='10.10.60.4'/>
+	</Session>
+	<Session id='61'> <!-- 3.10<-->10.3 -->
+		<Router exterAddr='10.10.61.11'/>
+		<Router exterAddr='10.10.61.4'/>
+	</Session>
+	<Session id='62'> <!-- 3.11<-->11.3 -->
+		<Router exterAddr='10.10.62.12'/>
+		<Router exterAddr='10.10.62.4'/>
+	</Session>
+	<Session id='63'> <!-- 3.12<-->12.3 -->
+		<Router exterAddr='10.10.63.13'/>
+		<Router exterAddr='10.10.63.4'/>
+	</Session>
+	<Session id='64'> <!-- 3.13<-->13.3 -->
+		<Router exterAddr='10.10.64.14'/>
+		<Router exterAddr='10.10.64.4'/>
+	</Session>
+	<Session id='65'> <!-- 3.14<-->14.3 -->
+		<Router exterAddr='10.10.65.15'/>
+		<Router exterAddr='10.10.65.4'/>
+	</Session>
+	<Session id='66'> <!-- 3.15<-->15.3 -->
+		<Router exterAddr='10.10.66.16'/>
+		<Router exterAddr='10.10.66.4'/>
+	</Session>
+	<Session id='67'> <!-- 3.16<-->16.3 -->
+		<Router exterAddr='10.10.67.17'/>
+		<Router exterAddr='10.10.67.4'/>
+	</Session>
+	<Session id='68'> <!-- 3.17<-->17.3 -->
+		<Router exterAddr='10.10.68.18'/>
+		<Router exterAddr='10.10.68.4'/>
+	</Session>
+	<Session id='69'> <!-- 3.18<-->18.3 -->
+		<Router exterAddr='10.10.69.19'/>
+		<Router exterAddr='10.10.69.4'/>
+	</Session>
+	<Session id='70'> <!-- 3.19<-->19.3 -->
+		<Router exterAddr='10.10.70.20'/>
+		<Router exterAddr='10.10.70.4'/>
+	</Session>
+	<Session id='71'> <!-- 4.5<-->5.4 -->
+		<Router exterAddr='10.10.71.6'/>
+		<Router exterAddr='10.10.71.5'/>
+	</Session>
+	<Session id='72'> <!-- 4.6<-->6.4 -->
+		<Router exterAddr='10.10.72.7'/>
+		<Router exterAddr='10.10.72.5'/>
+	</Session>
+	<Session id='73'> <!-- 4.7<-->7.4 -->
+		<Router exterAddr='10.10.73.8'/>
+		<Router exterAddr='10.10.73.5'/>
+	</Session>
+	<Session id='74'> <!-- 4.8<-->8.4 -->
+		<Router exterAddr='10.10.74.9'/>
+		<Router exterAddr='10.10.74.5'/>
+	</Session>
+	<Session id='75'> <!-- 4.9<-->9.4 -->
+		<Router exterAddr='10.10.75.10'/>
+		<Router exterAddr='10.10.75.5'/>
+	</Session>
+	<Session id='76'> <!-- 4.10<-->10.4 -->
+		<Router exterAddr='10.10.76.11'/>
+		<Router exterAddr='10.10.76.5'/>
+	</Session>
+	<Session id='77'> <!-- 4.11<-->11.4 -->
+		<Router exterAddr='10.10.77.12'/>
+		<Router exterAddr='10.10.77.5'/>
+	</Session>
+	<Session id='78'> <!-- 4.12<-->12.4 -->
+		<Router exterAddr='10.10.78.13'/>
+		<Router exterAddr='10.10.78.5'/>
+	</Session>
+	<Session id='79'> <!-- 4.13<-->13.4 -->
+		<Router exterAddr='10.10.79.14'/>
+		<Router exterAddr='10.10.79.5'/>
+	</Session>
+	<Session id='80'> <!-- 4.14<-->14.4 -->
+		<Router exterAddr='10.10.80.15'/>
+		<Router exterAddr='10.10.80.5'/>
+	</Session>
+	<Session id='81'> <!-- 4.15<-->15.4 -->
+		<Router exterAddr='10.10.81.16'/>
+		<Router exterAddr='10.10.81.5'/>
+	</Session>
+	<Session id='82'> <!-- 4.16<-->16.4 -->
+		<Router exterAddr='10.10.82.17'/>
+		<Router exterAddr='10.10.82.5'/>
+	</Session>
+	<Session id='83'> <!-- 4.17<-->17.4 -->
+		<Router exterAddr='10.10.83.18'/>
+		<Router exterAddr='10.10.83.5'/>
+	</Session>
+	<Session id='84'> <!-- 4.18<-->18.4 -->
+		<Router exterAddr='10.10.84.19'/>
+		<Router exterAddr='10.10.84.5'/>
+	</Session>
+	<Session id='85'> <!-- 4.19<-->19.4 -->
+		<Router exterAddr='10.10.85.20'/>
+		<Router exterAddr='10.10.85.5'/>
+	</Session>
+	<Session id='86'> <!-- 5.6<-->6.5 -->
+		<Router exterAddr='10.10.86.7'/>
+		<Router exterAddr='10.10.86.6'/>
+	</Session>
+	<Session id='87'> <!-- 5.7<-->7.5 -->
+		<Router exterAddr='10.10.87.8'/>
+		<Router exterAddr='10.10.87.6'/>
+	</Session>
+	<Session id='88'> <!-- 5.8<-->8.5 -->
+		<Router exterAddr='10.10.88.9'/>
+		<Router exterAddr='10.10.88.6'/>
+	</Session>
+	<Session id='89'> <!-- 5.9<-->9.5 -->
+		<Router exterAddr='10.10.89.10'/>
+		<Router exterAddr='10.10.89.6'/>
+	</Session>
+	<Session id='90'> <!-- 5.10<-->10.5 -->
+		<Router exterAddr='10.10.90.11'/>
+		<Router exterAddr='10.10.90.6'/>
+	</Session>
+	<Session id='91'> <!-- 5.11<-->11.5 -->
+		<Router exterAddr='10.10.91.12'/>
+		<Router exterAddr='10.10.91.6'/>
+	</Session>
+	<Session id='92'> <!-- 5.12<-->12.5 -->
+		<Router exterAddr='10.10.92.13'/>
+		<Router exterAddr='10.10.92.6'/>
+	</Session>
+	<Session id='93'> <!-- 5.13<-->13.5 -->
+		<Router exterAddr='10.10.93.14'/>
+		<Router exterAddr='10.10.93.6'/>
+	</Session>
+	<Session id='94'> <!-- 5.14<-->14.5 -->
+		<Router exterAddr='10.10.94.15'/>
+		<Router exterAddr='10.10.94.6'/>
+	</Session>
+	<Session id='95'> <!-- 5.15<-->15.5 -->
+		<Router exterAddr='10.10.95.16'/>
+		<Router exterAddr='10.10.95.6'/>
+	</Session>
+	<Session id='96'> <!-- 5.16<-->16.5 -->
+		<Router exterAddr='10.10.96.17'/>
+		<Router exterAddr='10.10.96.6'/>
+	</Session>
+	<Session id='97'> <!-- 5.17<-->17.5 -->
+		<Router exterAddr='10.10.97.18'/>
+		<Router exterAddr='10.10.97.6'/>
+	</Session>
+	<Session id='98'> <!-- 5.18<-->18.5 -->
+		<Router exterAddr='10.10.98.19'/>
+		<Router exterAddr='10.10.98.6'/>
+	</Session>
+	<Session id='99'> <!-- 5.19<-->19.5 -->
+		<Router exterAddr='10.10.99.20'/>
+		<Router exterAddr='10.10.99.6'/>
+	</Session>
+	<Session id='100'> <!-- 6.7<-->7.6 -->
+		<Router exterAddr='10.10.100.8'/>
+		<Router exterAddr='10.10.100.7'/>
+	</Session>
+	<Session id='101'> <!-- 6.8<-->8.6 -->
+		<Router exterAddr='10.10.101.9'/>
+		<Router exterAddr='10.10.101.7'/>
+	</Session>
+	<Session id='102'> <!-- 6.9<-->9.6 -->
+		<Router exterAddr='10.10.102.10'/>
+		<Router exterAddr='10.10.102.7'/>
+	</Session>
+	<Session id='103'> <!-- 6.10<-->10.6 -->
+		<Router exterAddr='10.10.103.11'/>
+		<Router exterAddr='10.10.103.7'/>
+	</Session>
+	<Session id='104'> <!-- 6.11<-->11.6 -->
+		<Router exterAddr='10.10.104.12'/>
+		<Router exterAddr='10.10.104.7'/>
+	</Session>
+	<Session id='105'> <!-- 6.12<-->12.6 -->
+		<Router exterAddr='10.10.105.13'/>
+		<Router exterAddr='10.10.105.7'/>
+	</Session>
+	<Session id='106'> <!-- 6.13<-->13.6 -->
+		<Router exterAddr='10.10.106.14'/>
+		<Router exterAddr='10.10.106.7'/>
+	</Session>
+	<Session id='107'> <!-- 6.14<-->14.6 -->
+		<Router exterAddr='10.10.107.15'/>
+		<Router exterAddr='10.10.107.7'/>
+	</Session>
+	<Session id='108'> <!-- 6.15<-->15.6 -->
+		<Router exterAddr='10.10.108.16'/>
+		<Router exterAddr='10.10.108.7'/>
+	</Session>
+	<Session id='109'> <!-- 6.16<-->16.6 -->
+		<Router exterAddr='10.10.109.17'/>
+		<Router exterAddr='10.10.109.7'/>
+	</Session>
+	<Session id='110'> <!-- 6.17<-->17.6 -->
+		<Router exterAddr='10.10.110.18'/>
+		<Router exterAddr='10.10.110.7'/>
+	</Session>
+	<Session id='111'> <!-- 6.18<-->18.6 -->
+		<Router exterAddr='10.10.111.19'/>
+		<Router exterAddr='10.10.111.7'/>
+	</Session>
+	<Session id='112'> <!-- 6.19<-->19.6 -->
+		<Router exterAddr='10.10.112.20'/>
+		<Router exterAddr='10.10.112.7'/>
+	</Session>
+	<Session id='113'> <!-- 7.8<-->8.7 -->
+		<Router exterAddr='10.10.113.9'/>
+		<Router exterAddr='10.10.113.8'/>
+	</Session>
+	<Session id='114'> <!-- 7.9<-->9.7 -->
+		<Router exterAddr='10.10.114.10'/>
+		<Router exterAddr='10.10.114.8'/>
+	</Session>
+	<Session id='115'> <!-- 7.10<-->10.7 -->
+		<Router exterAddr='10.10.115.11'/>
+		<Router exterAddr='10.10.115.8'/>
+	</Session>
+	<Session id='116'> <!-- 7.11<-->11.7 -->
+		<Router exterAddr='10.10.116.12'/>
+		<Router exterAddr='10.10.116.8'/>
+	</Session>
+	<Session id='117'> <!-- 7.12<-->12.7 -->
+		<Router exterAddr='10.10.117.13'/>
+		<Router exterAddr='10.10.117.8'/>
+	</Session>
+	<Session id='118'> <!-- 7.13<-->13.7 -->
+		<Router exterAddr='10.10.118.14'/>
+		<Router exterAddr='10.10.118.8'/>
+	</Session>
+	<Session id='119'> <!-- 7.14<-->14.7 -->
+		<Router exterAddr='10.10.119.15'/>
+		<Router exterAddr='10.10.119.8'/>
+	</Session>
+	<Session id='120'> <!-- 7.15<-->15.7 -->
+		<Router exterAddr='10.10.120.16'/>
+		<Router exterAddr='10.10.120.8'/>
+	</Session>
+	<Session id='121'> <!-- 7.16<-->16.7 -->
+		<Router exterAddr='10.10.121.17'/>
+		<Router exterAddr='10.10.121.8'/>
+	</Session>
+	<Session id='122'> <!-- 7.17<-->17.7 -->
+		<Router exterAddr='10.10.122.18'/>
+		<Router exterAddr='10.10.122.8'/>
+	</Session>
+	<Session id='123'> <!-- 7.18<-->18.7 -->
+		<Router exterAddr='10.10.123.19'/>
+		<Router exterAddr='10.10.123.8'/>
+	</Session>
+	<Session id='124'> <!-- 7.19<-->19.7 -->
+		<Router exterAddr='10.10.124.20'/>
+		<Router exterAddr='10.10.124.8'/>
+	</Session>
+	<Session id='125'> <!-- 8.9<-->9.8 -->
+		<Router exterAddr='10.10.125.10'/>
+		<Router exterAddr='10.10.125.9'/>
+	</Session>
+	<Session id='126'> <!-- 8.10<-->10.8 -->
+		<Router exterAddr='10.10.126.11'/>
+		<Router exterAddr='10.10.126.9'/>
+	</Session>
+	<Session id='127'> <!-- 8.11<-->11.8 -->
+		<Router exterAddr='10.10.127.12'/>
+		<Router exterAddr='10.10.127.9'/>
+	</Session>
+	<Session id='128'> <!-- 8.12<-->12.8 -->
+		<Router exterAddr='10.10.128.13'/>
+		<Router exterAddr='10.10.128.9'/>
+	</Session>
+	<Session id='129'> <!-- 8.13<-->13.8 -->
+		<Router exterAddr='10.10.129.14'/>
+		<Router exterAddr='10.10.129.9'/>
+	</Session>
+	<Session id='130'> <!-- 8.14<-->14.8 -->
+		<Router exterAddr='10.10.130.15'/>
+		<Router exterAddr='10.10.130.9'/>
+	</Session>
+	<Session id='131'> <!-- 8.15<-->15.8 -->
+		<Router exterAddr='10.10.131.16'/>
+		<Router exterAddr='10.10.131.9'/>
+	</Session>
+	<Session id='132'> <!-- 8.16<-->16.8 -->
+		<Router exterAddr='10.10.132.17'/>
+		<Router exterAddr='10.10.132.9'/>
+	</Session>
+	<Session id='133'> <!-- 8.17<-->17.8 -->
+		<Router exterAddr='10.10.133.18'/>
+		<Router exterAddr='10.10.133.9'/>
+	</Session>
+	<Session id='134'> <!-- 8.18<-->18.8 -->
+		<Router exterAddr='10.10.134.19'/>
+		<Router exterAddr='10.10.134.9'/>
+	</Session>
+	<Session id='135'> <!-- 8.19<-->19.8 -->
+		<Router exterAddr='10.10.135.20'/>
+		<Router exterAddr='10.10.135.9'/>
+	</Session>
+	<Session id='136'> <!-- 9.10<-->10.9 -->
+		<Router exterAddr='10.10.136.11'/>
+		<Router exterAddr='10.10.136.10'/>
+	</Session>
+	<Session id='137'> <!-- 9.11<-->11.9 -->
+		<Router exterAddr='10.10.137.12'/>
+		<Router exterAddr='10.10.137.10'/>
+	</Session>
+	<Session id='138'> <!-- 9.12<-->12.9 -->
+		<Router exterAddr='10.10.138.13'/>
+		<Router exterAddr='10.10.138.10'/>
+	</Session>
+	<Session id='139'> <!-- 9.13<-->13.9 -->
+		<Router exterAddr='10.10.139.14'/>
+		<Router exterAddr='10.10.139.10'/>
+	</Session>
+	<Session id='140'> <!-- 9.14<-->14.9 -->
+		<Router exterAddr='10.10.140.15'/>
+		<Router exterAddr='10.10.140.10'/>
+	</Session>
+	<Session id='141'> <!-- 9.15<-->15.9 -->
+		<Router exterAddr='10.10.141.16'/>
+		<Router exterAddr='10.10.141.10'/>
+	</Session>
+	<Session id='142'> <!-- 9.16<-->16.9 -->
+		<Router exterAddr='10.10.142.17'/>
+		<Router exterAddr='10.10.142.10'/>
+	</Session>
+	<Session id='143'> <!-- 9.17<-->17.9 -->
+		<Router exterAddr='10.10.143.18'/>
+		<Router exterAddr='10.10.143.10'/>
+	</Session>
+	<Session id='144'> <!-- 9.18<-->18.9 -->
+		<Router exterAddr='10.10.144.19'/>
+		<Router exterAddr='10.10.144.10'/>
+	</Session>
+	<Session id='145'> <!-- 9.19<-->19.9 -->
+		<Router exterAddr='10.10.145.20'/>
+		<Router exterAddr='10.10.145.10'/>
+	</Session>
+	<Session id='146'> <!-- 10.11<-->11.10 -->
+		<Router exterAddr='10.10.146.12'/>
+		<Router exterAddr='10.10.146.11'/>
+	</Session>
+	<Session id='147'> <!-- 10.12<-->12.10 -->
+		<Router exterAddr='10.10.147.13'/>
+		<Router exterAddr='10.10.147.11'/>
+	</Session>
+	<Session id='148'> <!-- 10.13<-->13.10 -->
+		<Router exterAddr='10.10.148.14'/>
+		<Router exterAddr='10.10.148.11'/>
+	</Session>
+	<Session id='149'> <!-- 10.14<-->14.10 -->
+		<Router exterAddr='10.10.149.15'/>
+		<Router exterAddr='10.10.149.11'/>
+	</Session>
+	<Session id='150'> <!-- 10.15<-->15.10 -->
+		<Router exterAddr='10.10.150.16'/>
+		<Router exterAddr='10.10.150.11'/>
+	</Session>
+	<Session id='151'> <!-- 10.16<-->16.10 -->
+		<Router exterAddr='10.10.151.17'/>
+		<Router exterAddr='10.10.151.11'/>
+	</Session>
+	<Session id='152'> <!-- 10.17<-->17.10 -->
+		<Router exterAddr='10.10.152.18'/>
+		<Router exterAddr='10.10.152.11'/>
+	</Session>
+	<Session id='153'> <!-- 10.18<-->18.10 -->
+		<Router exterAddr='10.10.153.19'/>
+		<Router exterAddr='10.10.153.11'/>
+	</Session>
+	<Session id='154'> <!-- 10.19<-->19.10 -->
+		<Router exterAddr='10.10.154.20'/>
+		<Router exterAddr='10.10.154.11'/>
+	</Session>
+	<Session id='155'> <!-- 11.12<-->12.11 -->
+		<Router exterAddr='10.10.155.13'/>
+		<Router exterAddr='10.10.155.12'/>
+	</Session>
+	<Session id='156'> <!-- 11.13<-->13.11 -->
+		<Router exterAddr='10.10.156.14'/>
+		<Router exterAddr='10.10.156.12'/>
+	</Session>
+	<Session id='157'> <!-- 11.14<-->14.11 -->
+		<Router exterAddr='10.10.157.15'/>
+		<Router exterAddr='10.10.157.12'/>
+	</Session>
+	<Session id='158'> <!-- 11.15<-->15.11 -->
+		<Router exterAddr='10.10.158.16'/>
+		<Router exterAddr='10.10.158.12'/>
+	</Session>
+	<Session id='159'> <!-- 11.16<-->16.11 -->
+		<Router exterAddr='10.10.159.17'/>
+		<Router exterAddr='10.10.159.12'/>
+	</Session>
+	<Session id='160'> <!-- 11.17<-->17.11 -->
+		<Router exterAddr='10.10.160.18'/>
+		<Router exterAddr='10.10.160.12'/>
+	</Session>
+	<Session id='161'> <!-- 11.18<-->18.11 -->
+		<Router exterAddr='10.10.161.19'/>
+		<Router exterAddr='10.10.161.12'/>
+	</Session>
+	<Session id='162'> <!-- 11.19<-->19.11 -->
+		<Router exterAddr='10.10.162.20'/>
+		<Router exterAddr='10.10.162.12'/>
+	</Session>
+	<Session id='163'> <!-- 12.13<-->13.12 -->
+		<Router exterAddr='10.10.163.14'/>
+		<Router exterAddr='10.10.163.13'/>
+	</Session>
+	<Session id='164'> <!-- 12.14<-->14.12 -->
+		<Router exterAddr='10.10.164.15'/>
+		<Router exterAddr='10.10.164.13'/>
+	</Session>
+	<Session id='165'> <!-- 12.15<-->15.12 -->
+		<Router exterAddr='10.10.165.16'/>
+		<Router exterAddr='10.10.165.13'/>
+	</Session>
+	<Session id='166'> <!-- 12.16<-->16.12 -->
+		<Router exterAddr='10.10.166.17'/>
+		<Router exterAddr='10.10.166.13'/>
+	</Session>
+	<Session id='167'> <!-- 12.17<-->17.12 -->
+		<Router exterAddr='10.10.167.18'/>
+		<Router exterAddr='10.10.167.13'/>
+	</Session>
+	<Session id='168'> <!-- 12.18<-->18.12 -->
+		<Router exterAddr='10.10.168.19'/>
+		<Router exterAddr='10.10.168.13'/>
+	</Session>
+	<Session id='169'> <!-- 12.19<-->19.12 -->
+		<Router exterAddr='10.10.169.20'/>
+		<Router exterAddr='10.10.169.13'/>
+	</Session>
+	<Session id='170'> <!-- 13.14<-->14.13 -->
+		<Router exterAddr='10.10.170.15'/>
+		<Router exterAddr='10.10.170.14'/>
+	</Session>
+	<Session id='171'> <!-- 13.15<-->15.13 -->
+		<Router exterAddr='10.10.171.16'/>
+		<Router exterAddr='10.10.171.14'/>
+	</Session>
+	<Session id='172'> <!-- 13.16<-->16.13 -->
+		<Router exterAddr='10.10.172.17'/>
+		<Router exterAddr='10.10.172.14'/>
+	</Session>
+	<Session id='173'> <!-- 13.17<-->17.13 -->
+		<Router exterAddr='10.10.173.18'/>
+		<Router exterAddr='10.10.173.14'/>
+	</Session>
+	<Session id='174'> <!-- 13.18<-->18.13 -->
+		<Router exterAddr='10.10.174.19'/>
+		<Router exterAddr='10.10.174.14'/>
+	</Session>
+	<Session id='175'> <!-- 13.19<-->19.13 -->
+		<Router exterAddr='10.10.175.20'/>
+		<Router exterAddr='10.10.175.14'/>
+	</Session>
+	<Session id='176'> <!-- 14.15<-->15.14 -->
+		<Router exterAddr='10.10.176.16'/>
+		<Router exterAddr='10.10.176.15'/>
+	</Session>
+	<Session id='177'> <!-- 14.16<-->16.14 -->
+		<Router exterAddr='10.10.177.17'/>
+		<Router exterAddr='10.10.177.15'/>
+	</Session>
+	<Session id='178'> <!-- 14.17<-->17.14 -->
+		<Router exterAddr='10.10.178.18'/>
+		<Router exterAddr='10.10.178.15'/>
+	</Session>
+	<Session id='179'> <!-- 14.18<-->18.14 -->
+		<Router exterAddr='10.10.179.19'/>
+		<Router exterAddr='10.10.179.15'/>
+	</Session>
+	<Session id='180'> <!-- 14.19<-->19.14 -->
+		<Router exterAddr='10.10.180.20'/>
+		<Router exterAddr='10.10.180.15'/>
+	</Session>
+	<Session id='181'> <!-- 15.16<-->16.15 -->
+		<Router exterAddr='10.10.181.17'/>
+		<Router exterAddr='10.10.181.16'/>
+	</Session>
+	<Session id='182'> <!-- 15.17<-->17.15 -->
+		<Router exterAddr='10.10.182.18'/>
+		<Router exterAddr='10.10.182.16'/>
+	</Session>
+	<Session id='183'> <!-- 15.18<-->18.15 -->
+		<Router exterAddr='10.10.183.19'/>
+		<Router exterAddr='10.10.183.16'/>
+	</Session>
+	<Session id='184'> <!-- 15.19<-->19.15 -->
+		<Router exterAddr='10.10.184.20'/>
+		<Router exterAddr='10.10.184.16'/>
+	</Session>
+	<Session id='185'> <!-- 16.17<-->17.16 -->
+		<Router exterAddr='10.10.185.18'/>
+		<Router exterAddr='10.10.185.17'/>
+	</Session>
+	<Session id='186'> <!-- 16.18<-->18.16 -->
+		<Router exterAddr='10.10.186.19'/>
+		<Router exterAddr='10.10.186.17'/>
+	</Session>
+	<Session id='187'> <!-- 16.19<-->19.16 -->
+		<Router exterAddr='10.10.187.20'/>
+		<Router exterAddr='10.10.187.17'/>
+	</Session>
+	<Session id='188'> <!-- 17.18<-->18.17 -->
+		<Router exterAddr='10.10.188.19'/>
+		<Router exterAddr='10.10.188.18'/>
+	</Session>
+	<Session id='189'> <!-- 17.19<-->19.17 -->
+		<Router exterAddr='10.10.189.20'/>
+		<Router exterAddr='10.10.189.18'/>
+	</Session>
+	<Session id='190'> <!-- 18.19<-->19.18 -->
+		<Router exterAddr='10.10.190.20'/>
+		<Router exterAddr='10.10.190.19'/>
+	</Session>
+
+
+</BGPConfig>
+
