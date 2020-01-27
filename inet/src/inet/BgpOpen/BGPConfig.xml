@@ -63,6 +63,42 @@
     <AS id="65264">
         <Router interAddr="10.10.170.1"/> <!--Berlin-->
     </AS>
+    <AS id="65265">
+        <Router interAddr="10.10.180.1"/> <!--Oslo-->
+    </AS>
+    <AS id="65266">
+        <Router interAddr="10.10.190.1"/> <!--Dublin-->
+    </AS>
+    <AS id="65267">
+        <Router interAddr="10.10.200.1"/> <!--Geneva-->
+    </AS>
+    <AS id="65268">
+        <Router interAddr="10.10.210.1"/> <!--Budapest-->
+    </AS>
+    <AS id="65269">
+        <Router interAddr="10.10.220.1"/> <!--Zagreb-->
+    </AS>
+    <AS id="65270">
+        <Router interAddr="10.10.230.1"/> <!--Sofia-->
+    </AS>
+    <AS id="65271">
+        <Router interAddr="10.10.240.1"/> <!--Belgrade-->
+    </AS>
+    <AS id="65272">
+        <Router interAddr="10.10.250.1"/> <!--Kiev-->
+    </AS>
+    <AS id="65273">
+        <Router interAddr="10.11.0.1"/> <!--Vilnius-->
+    </AS>
+    <AS id="65274">
+        <Router interAddr="10.11.10.1"/> <!--Riga-->
+    </AS>
+    <AS id="65275">
+        <Router interAddr="10.11.20.1"/> <!--Tallin-->
+    </AS>
+    <AS id="65276">
+        <Router interAddr="10.11.30.1"/> <!--Helsinki-->
+    </AS>
    <Session id="1">
         <Router exterAddr="10.10.10.1"/> <!--Frankfurt-->
         <Router exterAddr="10.10.10.2"/> <!--Duesseldorf-->
@@ -191,5 +227,102 @@
         <Router exterAddr="10.10.54.1"/> <!--Amsterdam-->
         <Router exterAddr="10.10.54.2"/> <!--Stockholm-->
    </Session>
+   <Session id="33">
+        <Router exterAddr="10.10.180.1"/> <!--Oslo-->
+        <Router exterAddr="10.10.180.2"/> <!--Copenhagen-->
+   </Session>
+   <Session id="34">
+        <Router exterAddr="10.10.181.1"/> <!--Oslo-->
+        <Router exterAddr="10.10.181.2"/> <!--Stockholm-->
+   </Session>
+   <Session id="35">
+        <Router exterAddr="10.10.101.1"/> <!--Stockholm-->
+        <Router exterAddr="10.10.101.2"/> <!--Copenhagen-->
+   </Session>
+   <Session id="36">
+        <Router exterAddr="10.10.102.1"/> <!--Stockholm-->
+        <Router exterAddr="10.10.102.2"/> <!--Berlin-->
+   </Session>
+   <Session id="37">
+        <Router exterAddr="10.10.190.1"/> <!--Dublin-->
+        <Router exterAddr="10.10.190.2"/> <!--London-->
+   </Session>
+   <Session id="38">
+        <Router exterAddr="10.10.191.1"/> <!--Dublin-->
+        <Router exterAddr="10.10.191.2"/> <!--Manchester-->
+   </Session>
+   <Session id="39">
+        <Router exterAddr="10.10.31.1"/> <!--Manchester-->
+        <Router exterAddr="10.10.31.2"/> <!--Amsterdam-->
+   </Session>
+   <Session id="40">
+        <Router exterAddr="10.10.151.1"/> <!--Vienna-->
+        <Router exterAddr="10.10.151.2"/> <!--Warsaw-->
+   </Session>
+   <Session id="41">
+        <Router exterAddr="10.10.200.1"/> <!--Geneva-->
+        <Router exterAddr="10.10.200.2"/> <!--Zurich-->
+   </Session>
+   <Session id="42">
+        <Router exterAddr="10.10.210.1"/> <!--Budapest-->
+        <Router exterAddr="10.10.210.2"/> <!--Vienna-->
+   </Session>
+   <Session id="43">
+        <Router exterAddr="10.10.220.1"/> <!--Zagreb-->
+        <Router exterAddr="10.10.220.2"/> <!--Vienna-->
+   </Session>
+   <Session id="44">
+        <Router exterAddr="10.10.230.1"/> <!--Sofia-->
+        <Router exterAddr="10.10.230.2"/> <!--Zagreb-->
+   </Session>
+   <Session id="45">
+        <Router exterAddr="10.10.240.1"/> <!--Belgrade-->
+        <Router exterAddr="10.10.240.2"/> <!--Sofia-->
+   </Session>
+   <Session id="46">
+        <Router exterAddr="10.10.241.1"/> <!--Belgrade-->
+        <Router exterAddr="10.10.241.2"/> <!--Bucharest-->
+   </Session>
+   <Session id="47">
+        <Router exterAddr="10.10.242.1"/> <!--Belgrade-->
+        <Router exterAddr="10.10.242.2"/> <!--Budapest-->
+   </Session>
+   <Session id="48">
+        <Router exterAddr="10.10.211.1"/> <!--Budapest-->
+        <Router exterAddr="10.10.211.2"/> <!--Bucharest-->
+   </Session>
+   <Session id="49">
+        <Router exterAddr="10.10.250.1"/> <!--Kiev-->
+        <Router exterAddr="10.10.250.2"/> <!--Vienna-->
+   </Session>
+   <Session id="50">
+        <Router exterAddr="10.10.251.1"/> <!--Kiev-->
+        <Router exterAddr="10.10.251.2"/> <!--Warsaw-->
+   </Session>
+   <Session id="51">
+        <Router exterAddr="10.11.0.1"/> <!--Vilnius-->
+        <Router exterAddr="10.11.0.2"/> <!--Warsaw-->
+   </Session>
+   <Session id="52">
+        <Router exterAddr="10.11.10.1"/> <!--Riga-->
+        <Router exterAddr="10.11.10.2"/> <!--Vilnius-->
+   </Session>
+   <Session id="52">
+        <Router exterAddr="10.11.20.1"/> <!--Tallin-->
+        <Router exterAddr="10.11.20.2"/> <!--Riga-->
+   </Session>
+   <Session id="52">
+        <Router exterAddr="10.11.30.1"/> <!--Helsinski-->
+        <Router exterAddr="10.11.30.2"/> <!--Tallin-->
+   </Session>
+   <Session id="53">
+        <Router exterAddr="10.11.31.1"/> <!--Helsinski-->
+        <Router exterAddr="10.11.31.2"/> <!--Stockholm-->
+   </Session>
+   <Session id="54">
+        <Router exterAddr="10.11.21.1"/> <!--Tallin-->
+        <Router exterAddr="10.11.21.2"/> <!--Stockholm-->
+   </Session>
+   
 </BGPConfig>
 
