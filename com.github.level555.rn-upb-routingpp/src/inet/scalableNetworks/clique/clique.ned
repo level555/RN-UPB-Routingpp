@@ -1,8 +1,13 @@
 package inet.scalableNetworks.clique;
 
+//option 1: BgpRouter
 import inet.node.bgp.BgpRouter;
+//option 2: BgpRouterSimple
+import inet.shared.BGPRouterSimple;
+
 import inet.common.misc.ThruputMeteringChannel;
 import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
+
 
 network Clique {
 	parameters:
@@ -24,11 +29,14 @@ network Clique {
                 addDefaultRoutes = false;
                 addSubnetRoutes = false;
         }
-		node[nodes]: BgpRouter {
-		    parameters:
-		    	numPppInterfaces = nodes;
-//		    gates:
-//		        pppg[nodes];
+//option 1: BgpRouter
+//		node[nodes]: BgpRouter {
+//		    parameters:
+//		    	numPppInterfaces = nodes;
+//option 2: BgpRouterSimple
+		node[nodes]: BGPRouterSimple {
+		    gates:
+		        pppg[nodes];
 		}
 	connections allowunconnected:
         for i=0..nodes-1, for j=i+1..nodes-1 {

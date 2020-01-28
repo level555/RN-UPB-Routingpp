@@ -1,6 +1,10 @@
 package inet.scalableNetworks.bintree;
 
+//option 1: BgpRouter
 import inet.node.bgp.BgpRouter;
+//option 2: BgpRouterSimple
+import inet.shared.BGPRouterSimple;
+
 import inet.common.misc.ThruputMeteringChannel;
 import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
 
@@ -24,9 +28,14 @@ network BinTree {
                 addDefaultRoutes = false;
                 addSubnetRoutes = false;
         }
-		node[2^height-1]: BgpRouter {
-		    parameters:
-		    	numPppInterfaces = 3;
+//option 1: BgpRouter
+//		node[2^height-1]: BgpRouter {
+//		    parameters:
+//		    	numPppInterfaces = 3;
+//option 2: BgpRouterSimple
+		node[2^height-1]: BGPRouterSimple {
+		    gates:
+		        pppg[3];
 		}
       connections allowunconnected:
         for i=0..2^(height-1)-1, if 2*i+1 < 2^height-1 {

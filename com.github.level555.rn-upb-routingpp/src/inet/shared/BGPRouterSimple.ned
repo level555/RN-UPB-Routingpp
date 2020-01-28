@@ -15,7 +15,7 @@
 // along with this program; if not, see <http://www.gnu.org/licenses/>.
 //
 
-package inet.europe;
+package inet.shared;
 
 import inet.common.MessageDispatcher;
 import inet.common.misc.MessageChecker;
