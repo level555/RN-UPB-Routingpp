@@ -6,7 +6,7 @@ import inet.visualizer.integrated.IntegratedCanvasVisualizer;
 
 network BgpNetwork
 {
-    @display("bgb=2262.004,1567.1539");
+    @display("bgb=4599.8877,2953.48");
     types:
         channel LINK_100 extends ThruputMeteringChannel
         {
@@ -31,123 +31,155 @@ network BgpNetwork
         }
         Frankfurt: BGPRouterSimple {
             parameters:
-                @display("p=520,545");
+                @display("p=2111.4238,870.334");
         }
         Duesseldorf: BGPRouterSimple {
             parameters:
-                @display("p=723,411");
+                @display("p=1803.5079,776.074");
         }
         London: BGPRouterSimple {
             parameters:
-                @display("p=247,294");
+                @display("p=722.66,826.346");
         }
         Manchester: BGPRouterSimple {
             parameters:
-                @display("p=183,231");
+                @display("p=782.358,417.886");
         }
         Munich: BGPRouterSimple {
             parameters:
-                @display("p=900.09796,1244.3159");
+                @display("p=2438.192,1611.846");
         }
         Amsterdam: BGPRouterSimple {
             parameters:
-                @display("p=384,239");
+                @display("p=1256.7999,458.732");
         }
         Luxembourg: BGPRouterSimple {
             parameters:
-                @display("p=394,494");
+                @display("p=1545.864,945.742");
         }
         Paris: BGPRouterSimple {
             parameters:
-                @display("p=211,620");
+                @display("p=1109.126,1153.114");
         }
         Prague: BGPRouterSimple {
             parameters:
-                @display("p=1233.626,848.786");
+                @display("p=2771.244,1215.954");
         }
         Copenhagen: BGPRouterSimple {
             parameters:
-                @display("p=626,203");
+                @display("p=1913.4779,339.336");
         }
         Stockholm: BGPRouterSimple {
             parameters:
-                @display("p=762,89");
+                @display("p=2045.4419,182.236");
         }
         Warsaw: BGPRouterSimple {
             parameters:
-                @display("p=1599.224,577.26");
+                @display("p=3478.1938,791.784");
         }
         Bucharest: BGPRouterSimple {
             parameters:
-                @display("p=2071.722,957.824");
+                @display("p=3952.636,1171.966");
         }
         Zurich: BGPRouterSimple {
             parameters:
-                @display("p=456,711");
+                @display("p=1787.798,1256.7999");
         }
         Brussels: BGPRouterSimple {
             parameters:
-                @display("p=410,401");
+                @display("p=1391.906,870.334");
         }
         Vienna: BGPRouterSimple {
             parameters:
-                @display("p=974.928,1004.86");
+                @display("p=2513.5999,1369.912");
         }
         hamburg: BGPRouterSimple {
             parameters:
-                @display("p=490,224");
+                @display("p=1636.9819,515.28796");
         }
         Berlin: BGPRouterSimple {
             parameters:
-                @display("p=755,297");
+                @display("p=2290.5178,691.24");
         }
         Oslo: BGPRouterSimple {
             parameters:
-                @display("p=571,65");
+                @display("p=1731.242,103.686");
         }
         Dublin: BGPRouterSimple {
             parameters:
-                @display("p=258,113");
+                @display("p=534.14,543.566");
         }
         Geneva: BGPRouterSimple {
             parameters:
-                @display("p=358,782");
+                @display("p=1523.87,1417.042");
         }
         Budapest: BGPRouterSimple {
             parameters:
-                @display("p=1678.33,921.47797");
+                @display("p=3559.886,1137.4039");
         }
         Zagreb: BGPRouterSimple {
             parameters:
-                @display("p=1667.64,1269.9719");
+                @display("p=3547.3179,1486.166");
         }
         Sofia: BGPRouterSimple {
             parameters:
-                @display("p=2078.136,1366.182");
+                @display("p=3958.92,1580.4259");
         }
         Belgrade: BGPRouterSimple {
             parameters:
-                @display("p=1924.2,1111.76");
+                @display("p=3804.962,1325.924");
         }
         Kiev: BGPRouterSimple {
             parameters:
-                @display("p=1971.236,630.70996");
+                @display("p=3852.0918,845.198");
         }
         Vilnius: BGPRouterSimple {
             parameters:
-                @display("p=1545.7739,429.738");
+                @display("p=3424.78,644.11");
         }
         Riga: BGPRouterSimple {
             parameters:
-                @display("p=1344.802,329.25198");
+                @display("p=3226.834,543.566");
         }
         Tallin: BGPRouterSimple {
             parameters:
-                @display("p=1560.74,213.8");
+                @display("p=3154.5679,383.324");
         }
         helsinki: BGPRouterSimple {
             parameters:
-                @display("p=1319.146,100.486");
+                @display("p=3220.5498,197.946");
+        }
+        Lyon: BGPRouterSimple {
+            parameters:
+                @display("p=1351.0599,1696.6799");
+        }
+        Marseille: BGPRouterSimple {
+            parameters:
+                @display("p=1159.398,1998.3119");
+        }
+        Barcelona: BGPRouterSimple {
+            parameters:
+                @display("p=926.88995,2211.968");
+        }
+        Madrid: BGPRouterSimple {
+            parameters:
+                @display("p=540.424,2284.234");
+        }
+        Lisbon: BGPRouterSimple {
+            parameters:
+                @display("p=191.662,2431.908");
+        }
+        Edinburgh: BGPRouterSimple {
+            parameters:
+                @display("p=728.944,87.976");
+        }
+        Leeds: BGPRouterSimple {
+            parameters:
+                @display("p=1021.14996,251.36");
+        }
+        Bratislava: BGPRouterSimple {
+            parameters:
+                @display("p=3299.0999,970.878");
         }
     connections:
         Frankfurt.pppg++ <--> LINK_100 <--> Duesseldorf.pppg++;
@@ -231,8 +263,27 @@ network BgpNetwork
 
         helsinki.pppg++ <--> LINK_100 <--> Tallin.pppg++;
         helsinki.pppg++ <--> LINK_100 <--> Stockholm.pppg++;
-        
+
         Tallin.pppg++ <--> LINK_100 <--> Stockholm.pppg++;
+
+        Lyon.pppg++ <--> LINK_100 <--> Geneva.pppg++;
+
+        Marseille.pppg++ <--> LINK_100 <--> Lyon.pppg++;
+        Marseille.pppg++ <--> LINK_100 <--> Paris.pppg++;
+
+        Barcelona.pppg++ <--> LINK_100 <--> Marseille.pppg++;
+
+        Madrid.pppg++ <--> LINK_100 <--> Barcelona.pppg++;
+
+        Lisbon.pppg++ <--> LINK_100 <--> Madrid.pppg++;
+
+        Madrid.pppg++ <--> LINK_100 <--> Paris.pppg++;
+
+        Edinburgh.pppg++ <--> LINK_100 <--> Manchester.pppg++;
+
+        Leeds.pppg++ <--> LINK_100 <--> Manchester.pppg++;
+
+		Bratislava.pppg++ <--> LINK_100 <--> Vienna.pppg++;
 
 }
 

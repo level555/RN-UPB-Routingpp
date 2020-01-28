@@ -99,6 +99,30 @@
     <AS id="65276">
         <Router interAddr="10.11.30.1"/> <!--Helsinki-->
     </AS>
+    <AS id="65277">
+        <Router interAddr="10.11.40.1"/> <!--Lyon-->
+    </AS>
+    <AS id="65278">
+        <Router interAddr="10.11.50.1"/> <!--Marseille-->
+    </AS>
+    <AS id="65279">
+        <Router interAddr="10.11.60.1"/> <!--Barcelona-->
+    </AS>
+    <AS id="65280">
+        <Router interAddr="10.11.70.1"/> <!--Madrid-->
+    </AS>
+    <AS id="65281">
+        <Router interAddr="10.11.80.1"/> <!--Lison-->
+    </AS>
+    <AS id="65282">
+        <Router interAddr="10.11.90.1"/> <!--Edinburgh-->
+    </AS>
+    <AS id="65283">
+        <Router interAddr="10.11.100.1"/> <!--Leeds-->
+    </AS>
+    <AS id="65284">
+        <Router interAddr="10.11.110.1"/> <!--Bratislava-->
+    </AS>
    <Session id="1">
         <Router exterAddr="10.10.10.1"/> <!--Frankfurt-->
         <Router exterAddr="10.10.10.2"/> <!--Duesseldorf-->
@@ -322,6 +346,42 @@
    <Session id="54">
         <Router exterAddr="10.11.21.1"/> <!--Tallin-->
         <Router exterAddr="10.11.21.2"/> <!--Stockholm-->
+   </Session>
+   <Session id="55">
+        <Router exterAddr="10.11.40.1"/> <!--Lyon-->
+        <Router exterAddr="10.11.40.2"/> <!--Geneva-->
+   </Session>
+   <Session id="56">
+        <Router exterAddr="10.11.50.1"/> <!--Marseille-->
+        <Router exterAddr="10.11.50.2"/> <!--Lyon-->
+   </Session>
+   <Session id="57">
+        <Router exterAddr="10.11.60.1"/> <!--Barcelona-->
+        <Router exterAddr="10.11.60.2"/> <!--Marseille-->
+   </Session>
+   <Session id="58">
+        <Router exterAddr="10.11.70.1"/> <!--Madrid-->
+        <Router exterAddr="10.11.70.2"/> <!--Barcelona-->
+   </Session>
+   <Session id="59">
+        <Router exterAddr="10.11.80.1"/> <!--Lisbon-->
+        <Router exterAddr="10.11.80.2"/> <!--Madrid-->
+   </Session>
+   <Session id="60">
+        <Router exterAddr="10.11.71.1"/> <!--Madrid-->
+        <Router exterAddr="10.11.71.2"/> <!--Paris-->
+   </Session>
+   <Session id="61">
+        <Router exterAddr="10.11.90.1"/> <!--Edinburgh-->
+        <Router exterAddr="10.11.90.2"/> <!--Manchester-->
+   </Session>
+   <Session id="62">
+        <Router exterAddr="10.11.100.1"/> <!--Leeds-->
+        <Router exterAddr="10.11.100.2"/> <!--Manchester-->
+   </Session>
+   <Session id="63">
+        <Router exterAddr="10.11.110.1"/> <!--Bratislava-->
+        <Router exterAddr="10.11.110.2"/> <!--Vienna-->
    </Session>
    
 </BGPConfig>

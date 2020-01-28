@@ -1,14 +1,14 @@
 version 2
-run General-0-20200127-18:24:25-3121
+run General-0-20200128-10:01:26-6038
 attr configname General
-attr datetime 20200127-18:24:25
+attr datetime 20200128-10:01:26
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network BgpNetwork
-attr processid 3121
+attr processid 6038
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -3708,6 +3708,208 @@ scalar BgpNetwork.Manchester.ppp[2].ppp packetDropInterfaceDown:sum(packetBytes)
 attr interpolationmode none
 attr source packetDropReasonIsInterfaceDown(packetDropped)
 attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[3].ppp.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Manchester.ppp[3].ppp.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Manchester.ppp[3].ppp.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BgpNetwork.Manchester.ppp[3].ppp.queue queueLength:max -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Manchester.ppp[3].ppp.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Manchester.ppp[3].ppp.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Manchester.ppp[3].ppp.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[3].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Manchester.ppp[3].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[3].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Manchester.ppp[3].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[3].ppp transmissionState:timeavg 0
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Manchester.ppp[3].ppp rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Manchester.ppp[3].ppp rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[3].ppp txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Manchester.ppp[3].ppp txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[3].ppp rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Manchester.ppp[3].ppp rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[3].ppp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Manchester.ppp[3].ppp passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[3].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Manchester.ppp[3].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[3].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Manchester.ppp[3].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[4].ppp.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Manchester.ppp[4].ppp.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Manchester.ppp[4].ppp.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BgpNetwork.Manchester.ppp[4].ppp.queue queueLength:max -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Manchester.ppp[4].ppp.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Manchester.ppp[4].ppp.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Manchester.ppp[4].ppp.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[4].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Manchester.ppp[4].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[4].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Manchester.ppp[4].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[4].ppp transmissionState:timeavg 0
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Manchester.ppp[4].ppp rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Manchester.ppp[4].ppp rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[4].ppp txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Manchester.ppp[4].ppp txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[4].ppp rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Manchester.ppp[4].ppp rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[4].ppp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Manchester.ppp[4].ppp passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[4].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Manchester.ppp[4].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Manchester.ppp[4].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Manchester.ppp[4].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
 scalar BgpNetwork.Munich.bgp OPENMsgSent 2
 scalar BgpNetwork.Munich.bgp OPENMsgRecv 2
 scalar BgpNetwork.Munich.bgp KeepAliveMsgSent 2
@@ -6825,6 +7027,208 @@ attr interpolationmode none
 attr source packetDropReasonIsInterfaceDown(packetDropped)
 attr title "packet drop: interface down, count"
 scalar BgpNetwork.Paris.ppp[5].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[6].ppp.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Paris.ppp[6].ppp.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Paris.ppp[6].ppp.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BgpNetwork.Paris.ppp[6].ppp.queue queueLength:max -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Paris.ppp[6].ppp.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Paris.ppp[6].ppp.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Paris.ppp[6].ppp.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[6].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Paris.ppp[6].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[6].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Paris.ppp[6].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[6].ppp transmissionState:timeavg 0
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Paris.ppp[6].ppp rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Paris.ppp[6].ppp rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[6].ppp txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Paris.ppp[6].ppp txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[6].ppp rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Paris.ppp[6].ppp rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[6].ppp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Paris.ppp[6].ppp passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[6].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Paris.ppp[6].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[6].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Paris.ppp[6].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[7].ppp.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Paris.ppp[7].ppp.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Paris.ppp[7].ppp.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BgpNetwork.Paris.ppp[7].ppp.queue queueLength:max -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Paris.ppp[7].ppp.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Paris.ppp[7].ppp.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Paris.ppp[7].ppp.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[7].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Paris.ppp[7].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[7].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Paris.ppp[7].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[7].ppp transmissionState:timeavg 0
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Paris.ppp[7].ppp rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Paris.ppp[7].ppp rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[7].ppp txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Paris.ppp[7].ppp txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[7].ppp rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Paris.ppp[7].ppp rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[7].ppp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Paris.ppp[7].ppp passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[7].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Paris.ppp[7].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Paris.ppp[7].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Paris.ppp[7].ppp packetDropInterfaceDown:sum(packetBytes) 0
 attr interpolationmode none
 attr source packetDropReasonIsInterfaceDown(packetDropped)
 attr title "packet drop: interface down, sum(packetBytes)"
@@ -12588,6 +12992,107 @@ scalar BgpNetwork.Vienna.ppp[5].ppp packetDropInterfaceDown:sum(packetBytes) 0
 attr interpolationmode none
 attr source packetDropReasonIsInterfaceDown(packetDropped)
 attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Vienna.ppp[6].ppp.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Vienna.ppp[6].ppp.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Vienna.ppp[6].ppp.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BgpNetwork.Vienna.ppp[6].ppp.queue queueLength:max -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Vienna.ppp[6].ppp.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Vienna.ppp[6].ppp.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Vienna.ppp[6].ppp.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Vienna.ppp[6].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Vienna.ppp[6].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Vienna.ppp[6].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Vienna.ppp[6].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Vienna.ppp[6].ppp transmissionState:timeavg 0
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Vienna.ppp[6].ppp rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Vienna.ppp[6].ppp rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Vienna.ppp[6].ppp txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Vienna.ppp[6].ppp txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Vienna.ppp[6].ppp rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Vienna.ppp[6].ppp rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Vienna.ppp[6].ppp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Vienna.ppp[6].ppp passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Vienna.ppp[6].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Vienna.ppp[6].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Vienna.ppp[6].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Vienna.ppp[6].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
 scalar BgpNetwork.hamburg.bgp OPENMsgSent 3
 scalar BgpNetwork.hamburg.bgp OPENMsgRecv 3
 scalar BgpNetwork.hamburg.bgp KeepAliveMsgSent 3
@@ -14814,10 +15319,10 @@ scalar BgpNetwork.Dublin.ppp[1].ppp packetDropInterfaceDown:sum(packetBytes) 0
 attr interpolationmode none
 attr source packetDropReasonIsInterfaceDown(packetDropped)
 attr title "packet drop: interface down, sum(packetBytes)"
-scalar BgpNetwork.Geneva.bgp OPENMsgSent 1
-scalar BgpNetwork.Geneva.bgp OPENMsgRecv 1
-scalar BgpNetwork.Geneva.bgp KeepAliveMsgSent 1
-scalar BgpNetwork.Geneva.bgp KeepAliveMsgRcv 1
+scalar BgpNetwork.Geneva.bgp OPENMsgSent 2
+scalar BgpNetwork.Geneva.bgp OPENMsgRecv 2
+scalar BgpNetwork.Geneva.bgp KeepAliveMsgSent 2
+scalar BgpNetwork.Geneva.bgp KeepAliveMsgRcv 2
 scalar BgpNetwork.Geneva.bgp UpdateMsgSent 0
 scalar BgpNetwork.Geneva.bgp UpdateMsgRcv 0
 scalar BgpNetwork.Geneva.ipv4.ip packetDropAddressResolutionFailed:count 0
@@ -15033,6 +15538,153 @@ attr interpolationmode none
 attr source packetDropReasonIsInterfaceDown(packetDropped)
 attr title "packet drop: interface down, count"
 scalar BgpNetwork.Geneva.ppp[0].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Geneva.ppp[1].ppp.queue packetPopped:count 7
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Geneva.ppp[1].ppp.queue packetPopped:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Geneva.ppp[1].ppp.queue queueingTime:histogram
+field count 7
+field mean 5.4e-07
+field stddev 1.4e-06
+field min 0
+field max 3.8e-06
+field sum 3.8e-06
+field sqrsum 1.4e-11
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	6
+bin	1e-07	0
+bin	2e-07	0
+bin	3e-07	0
+bin	4e-07	0
+bin	5e-07	0
+bin	6e-07	0
+bin	7e-07	0
+bin	8e-07	0
+bin	9e-07	0
+bin	1e-06	0
+bin	1.1e-06	0
+bin	1.2e-06	0
+bin	1.3e-06	0
+bin	1.4e-06	0
+bin	1.5e-06	0
+bin	1.6e-06	0
+bin	1.7e-06	0
+bin	1.8e-06	0
+bin	1.9e-06	0
+bin	2e-06	0
+bin	2.1e-06	0
+bin	2.2e-06	0
+bin	2.3e-06	0
+bin	2.4e-06	0
+bin	2.5e-06	0
+bin	2.6e-06	0
+bin	2.7e-06	0
+bin	2.8e-06	0
+bin	2.9e-06	0
+bin	3e-06	0
+bin	3.1e-06	0
+bin	3.2e-06	0
+bin	3.3e-06	0
+bin	3.4e-06	0
+bin	3.5e-06	0
+bin	3.6e-06	0
+bin	3.7e-06	1
+bin	3.8e-06	0
+bin	3.9e-06	0
+bin	4e-06	0
+bin	4.1e-06	0
+bin	4.2e-06	0
+bin	4.3e-06	0
+bin	4.4e-06	0
+bin	4.5e-06	0
+bin	4.6e-06	0
+bin	4.7e-06	0
+scalar BgpNetwork.Geneva.ppp[1].ppp.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Geneva.ppp[1].ppp.queue queueLength:timeavg 7.5e-07
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Geneva.ppp[1].ppp.queue packetPushed:count 7
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Geneva.ppp[1].ppp.queue packetPushed:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Geneva.ppp[1].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Geneva.ppp[1].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Geneva.ppp[1].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Geneva.ppp[1].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Geneva.ppp[1].ppp transmissionState:timeavg 4.9e-07
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Geneva.ppp[1].ppp rxPkOk:count 6
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Geneva.ppp[1].ppp rxPkOk:sum(packetBytes) 3.4e+02
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Geneva.ppp[1].ppp txPk:count 7
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Geneva.ppp[1].ppp txPk:sum(packetBytes) 3.8e+02
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Geneva.ppp[1].ppp rcvdPkFromHl:count 7
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Geneva.ppp[1].ppp rcvdPkFromHl:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Geneva.ppp[1].ppp passedUpPk:count 6
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Geneva.ppp[1].ppp passedUpPk:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Geneva.ppp[1].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Geneva.ppp[1].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Geneva.ppp[1].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Geneva.ppp[1].ppp packetDropInterfaceDown:sum(packetBytes) 0
 attr interpolationmode none
 attr source packetDropReasonIsInterfaceDown(packetDropped)
 attr title "packet drop: interface down, sum(packetBytes)"
@@ -18813,6 +19465,2474 @@ attr interpolationmode none
 attr source packetDropReasonIsInterfaceDown(packetDropped)
 attr title "packet drop: interface down, count"
 scalar BgpNetwork.helsinki.ppp[1].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Lyon.bgp OPENMsgSent 2
+scalar BgpNetwork.Lyon.bgp OPENMsgRecv 2
+scalar BgpNetwork.Lyon.bgp KeepAliveMsgSent 2
+scalar BgpNetwork.Lyon.bgp KeepAliveMsgRcv 2
+scalar BgpNetwork.Lyon.bgp UpdateMsgSent 0
+scalar BgpNetwork.Lyon.bgp UpdateMsgRcv 0
+scalar BgpNetwork.Lyon.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BgpNetwork.Lyon.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BgpNetwork.Lyon.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BgpNetwork.Lyon.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BgpNetwork.Lyon.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BgpNetwork.Lyon.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BgpNetwork.Lyon.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar BgpNetwork.Lyon.ipv4.arp arpResolutionCompleted:count 0
+attr title "ARP completed resolutions, count"
+scalar BgpNetwork.Lyon.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar BgpNetwork.Lyon.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BgpNetwork.Lyon.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BgpNetwork.Lyon.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[0].ppp.queue packetPopped:count 6
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Lyon.ppp[0].ppp.queue packetPopped:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Lyon.ppp[0].ppp.queue queueingTime:histogram
+field count 6
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	6
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar BgpNetwork.Lyon.ppp[0].ppp.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Lyon.ppp[0].ppp.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Lyon.ppp[0].ppp.queue packetPushed:count 6
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Lyon.ppp[0].ppp.queue packetPushed:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[0].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Lyon.ppp[0].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[0].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Lyon.ppp[0].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[0].ppp transmissionState:timeavg 4.4e-07
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Lyon.ppp[0].ppp rxPkOk:count 7
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Lyon.ppp[0].ppp rxPkOk:sum(packetBytes) 3.8e+02
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[0].ppp txPk:count 6
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Lyon.ppp[0].ppp txPk:sum(packetBytes) 3.4e+02
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[0].ppp rcvdPkFromHl:count 6
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Lyon.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[0].ppp passedUpPk:count 7
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Lyon.ppp[0].ppp passedUpPk:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[0].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Lyon.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[0].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Lyon.ppp[0].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[1].ppp.queue packetPopped:count 7
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Lyon.ppp[1].ppp.queue packetPopped:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Lyon.ppp[1].ppp.queue queueingTime:histogram
+field count 7
+field mean 5.4e-07
+field stddev 1.4e-06
+field min 0
+field max 3.8e-06
+field sum 3.8e-06
+field sqrsum 1.4e-11
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	6
+bin	1e-07	0
+bin	2e-07	0
+bin	3e-07	0
+bin	4e-07	0
+bin	5e-07	0
+bin	6e-07	0
+bin	7e-07	0
+bin	8e-07	0
+bin	9e-07	0
+bin	1e-06	0
+bin	1.1e-06	0
+bin	1.2e-06	0
+bin	1.3e-06	0
+bin	1.4e-06	0
+bin	1.5e-06	0
+bin	1.6e-06	0
+bin	1.7e-06	0
+bin	1.8e-06	0
+bin	1.9e-06	0
+bin	2e-06	0
+bin	2.1e-06	0
+bin	2.2e-06	0
+bin	2.3e-06	0
+bin	2.4e-06	0
+bin	2.5e-06	0
+bin	2.6e-06	0
+bin	2.7e-06	0
+bin	2.8e-06	0
+bin	2.9e-06	0
+bin	3e-06	0
+bin	3.1e-06	0
+bin	3.2e-06	0
+bin	3.3e-06	0
+bin	3.4e-06	0
+bin	3.5e-06	0
+bin	3.6e-06	0
+bin	3.7e-06	1
+bin	3.8e-06	0
+bin	3.9e-06	0
+bin	4e-06	0
+bin	4.1e-06	0
+bin	4.2e-06	0
+bin	4.3e-06	0
+bin	4.4e-06	0
+bin	4.5e-06	0
+bin	4.6e-06	0
+bin	4.7e-06	0
+scalar BgpNetwork.Lyon.ppp[1].ppp.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Lyon.ppp[1].ppp.queue queueLength:timeavg 9.4e-07
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Lyon.ppp[1].ppp.queue packetPushed:count 7
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Lyon.ppp[1].ppp.queue packetPushed:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[1].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Lyon.ppp[1].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[1].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Lyon.ppp[1].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[1].ppp transmissionState:timeavg 4.9e-07
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Lyon.ppp[1].ppp rxPkOk:count 6
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Lyon.ppp[1].ppp rxPkOk:sum(packetBytes) 3.4e+02
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[1].ppp txPk:count 7
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Lyon.ppp[1].ppp txPk:sum(packetBytes) 3.8e+02
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[1].ppp rcvdPkFromHl:count 7
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Lyon.ppp[1].ppp rcvdPkFromHl:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[1].ppp passedUpPk:count 6
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Lyon.ppp[1].ppp passedUpPk:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[1].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Lyon.ppp[1].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Lyon.ppp[1].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Lyon.ppp[1].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Marseille.bgp OPENMsgSent 2
+scalar BgpNetwork.Marseille.bgp OPENMsgRecv 2
+scalar BgpNetwork.Marseille.bgp KeepAliveMsgSent 2
+scalar BgpNetwork.Marseille.bgp KeepAliveMsgRcv 2
+scalar BgpNetwork.Marseille.bgp UpdateMsgSent 0
+scalar BgpNetwork.Marseille.bgp UpdateMsgRcv 0
+scalar BgpNetwork.Marseille.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BgpNetwork.Marseille.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BgpNetwork.Marseille.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BgpNetwork.Marseille.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BgpNetwork.Marseille.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BgpNetwork.Marseille.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BgpNetwork.Marseille.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar BgpNetwork.Marseille.ipv4.arp arpResolutionCompleted:count 0
+attr title "ARP completed resolutions, count"
+scalar BgpNetwork.Marseille.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar BgpNetwork.Marseille.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BgpNetwork.Marseille.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BgpNetwork.Marseille.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[0].ppp.queue packetPopped:count 6
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Marseille.ppp[0].ppp.queue packetPopped:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Marseille.ppp[0].ppp.queue queueingTime:histogram
+field count 6
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	6
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar BgpNetwork.Marseille.ppp[0].ppp.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Marseille.ppp[0].ppp.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Marseille.ppp[0].ppp.queue packetPushed:count 6
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Marseille.ppp[0].ppp.queue packetPushed:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[0].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Marseille.ppp[0].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[0].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Marseille.ppp[0].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[0].ppp transmissionState:timeavg 4.4e-07
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Marseille.ppp[0].ppp rxPkOk:count 7
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Marseille.ppp[0].ppp rxPkOk:sum(packetBytes) 3.8e+02
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[0].ppp txPk:count 6
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Marseille.ppp[0].ppp txPk:sum(packetBytes) 3.4e+02
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[0].ppp rcvdPkFromHl:count 6
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Marseille.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[0].ppp passedUpPk:count 7
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Marseille.ppp[0].ppp passedUpPk:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[0].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Marseille.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[0].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Marseille.ppp[0].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[1].ppp.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Marseille.ppp[1].ppp.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Marseille.ppp[1].ppp.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BgpNetwork.Marseille.ppp[1].ppp.queue queueLength:max -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Marseille.ppp[1].ppp.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Marseille.ppp[1].ppp.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Marseille.ppp[1].ppp.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[1].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Marseille.ppp[1].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[1].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Marseille.ppp[1].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[1].ppp transmissionState:timeavg 0
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Marseille.ppp[1].ppp rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Marseille.ppp[1].ppp rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[1].ppp txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Marseille.ppp[1].ppp txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[1].ppp rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Marseille.ppp[1].ppp rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[1].ppp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Marseille.ppp[1].ppp passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[1].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Marseille.ppp[1].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[1].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Marseille.ppp[1].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[2].ppp.queue packetPopped:count 7
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Marseille.ppp[2].ppp.queue packetPopped:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Marseille.ppp[2].ppp.queue queueingTime:histogram
+field count 7
+field mean 5.4e-07
+field stddev 1.4e-06
+field min 0
+field max 3.8e-06
+field sum 3.8e-06
+field sqrsum 1.4e-11
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	6
+bin	1e-07	0
+bin	2e-07	0
+bin	3e-07	0
+bin	4e-07	0
+bin	5e-07	0
+bin	6e-07	0
+bin	7e-07	0
+bin	8e-07	0
+bin	9e-07	0
+bin	1e-06	0
+bin	1.1e-06	0
+bin	1.2e-06	0
+bin	1.3e-06	0
+bin	1.4e-06	0
+bin	1.5e-06	0
+bin	1.6e-06	0
+bin	1.7e-06	0
+bin	1.8e-06	0
+bin	1.9e-06	0
+bin	2e-06	0
+bin	2.1e-06	0
+bin	2.2e-06	0
+bin	2.3e-06	0
+bin	2.4e-06	0
+bin	2.5e-06	0
+bin	2.6e-06	0
+bin	2.7e-06	0
+bin	2.8e-06	0
+bin	2.9e-06	0
+bin	3e-06	0
+bin	3.1e-06	0
+bin	3.2e-06	0
+bin	3.3e-06	0
+bin	3.4e-06	0
+bin	3.5e-06	0
+bin	3.6e-06	0
+bin	3.7e-06	1
+bin	3.8e-06	0
+bin	3.9e-06	0
+bin	4e-06	0
+bin	4.1e-06	0
+bin	4.2e-06	0
+bin	4.3e-06	0
+bin	4.4e-06	0
+bin	4.5e-06	0
+bin	4.6e-06	0
+bin	4.7e-06	0
+scalar BgpNetwork.Marseille.ppp[2].ppp.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Marseille.ppp[2].ppp.queue queueLength:timeavg 1.3e-06
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Marseille.ppp[2].ppp.queue packetPushed:count 7
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Marseille.ppp[2].ppp.queue packetPushed:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[2].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Marseille.ppp[2].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[2].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Marseille.ppp[2].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[2].ppp transmissionState:timeavg 4.9e-07
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Marseille.ppp[2].ppp rxPkOk:count 6
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Marseille.ppp[2].ppp rxPkOk:sum(packetBytes) 3.4e+02
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[2].ppp txPk:count 7
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Marseille.ppp[2].ppp txPk:sum(packetBytes) 3.8e+02
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[2].ppp rcvdPkFromHl:count 7
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Marseille.ppp[2].ppp rcvdPkFromHl:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[2].ppp passedUpPk:count 6
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Marseille.ppp[2].ppp passedUpPk:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[2].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Marseille.ppp[2].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Marseille.ppp[2].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Marseille.ppp[2].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.bgp OPENMsgSent 2
+scalar BgpNetwork.Barcelona.bgp OPENMsgRecv 2
+scalar BgpNetwork.Barcelona.bgp KeepAliveMsgSent 2
+scalar BgpNetwork.Barcelona.bgp KeepAliveMsgRcv 2
+scalar BgpNetwork.Barcelona.bgp UpdateMsgSent 0
+scalar BgpNetwork.Barcelona.bgp UpdateMsgRcv 0
+scalar BgpNetwork.Barcelona.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BgpNetwork.Barcelona.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BgpNetwork.Barcelona.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BgpNetwork.Barcelona.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BgpNetwork.Barcelona.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BgpNetwork.Barcelona.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BgpNetwork.Barcelona.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar BgpNetwork.Barcelona.ipv4.arp arpResolutionCompleted:count 0
+attr title "ARP completed resolutions, count"
+scalar BgpNetwork.Barcelona.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar BgpNetwork.Barcelona.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BgpNetwork.Barcelona.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BgpNetwork.Barcelona.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[0].ppp.queue packetPopped:count 6
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Barcelona.ppp[0].ppp.queue packetPopped:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Barcelona.ppp[0].ppp.queue queueingTime:histogram
+field count 6
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	6
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar BgpNetwork.Barcelona.ppp[0].ppp.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Barcelona.ppp[0].ppp.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Barcelona.ppp[0].ppp.queue packetPushed:count 6
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Barcelona.ppp[0].ppp.queue packetPushed:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[0].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Barcelona.ppp[0].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[0].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Barcelona.ppp[0].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[0].ppp transmissionState:timeavg 4.4e-07
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Barcelona.ppp[0].ppp rxPkOk:count 7
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Barcelona.ppp[0].ppp rxPkOk:sum(packetBytes) 3.8e+02
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[0].ppp txPk:count 6
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Barcelona.ppp[0].ppp txPk:sum(packetBytes) 3.4e+02
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[0].ppp rcvdPkFromHl:count 6
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Barcelona.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[0].ppp passedUpPk:count 7
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Barcelona.ppp[0].ppp passedUpPk:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[0].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Barcelona.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[0].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Barcelona.ppp[0].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[1].ppp.queue packetPopped:count 7
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Barcelona.ppp[1].ppp.queue packetPopped:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Barcelona.ppp[1].ppp.queue queueingTime:histogram
+field count 7
+field mean 5.4e-07
+field stddev 1.4e-06
+field min 0
+field max 3.8e-06
+field sum 3.8e-06
+field sqrsum 1.4e-11
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	6
+bin	1e-07	0
+bin	2e-07	0
+bin	3e-07	0
+bin	4e-07	0
+bin	5e-07	0
+bin	6e-07	0
+bin	7e-07	0
+bin	8e-07	0
+bin	9e-07	0
+bin	1e-06	0
+bin	1.1e-06	0
+bin	1.2e-06	0
+bin	1.3e-06	0
+bin	1.4e-06	0
+bin	1.5e-06	0
+bin	1.6e-06	0
+bin	1.7e-06	0
+bin	1.8e-06	0
+bin	1.9e-06	0
+bin	2e-06	0
+bin	2.1e-06	0
+bin	2.2e-06	0
+bin	2.3e-06	0
+bin	2.4e-06	0
+bin	2.5e-06	0
+bin	2.6e-06	0
+bin	2.7e-06	0
+bin	2.8e-06	0
+bin	2.9e-06	0
+bin	3e-06	0
+bin	3.1e-06	0
+bin	3.2e-06	0
+bin	3.3e-06	0
+bin	3.4e-06	0
+bin	3.5e-06	0
+bin	3.6e-06	0
+bin	3.7e-06	1
+bin	3.8e-06	0
+bin	3.9e-06	0
+bin	4e-06	0
+bin	4.1e-06	0
+bin	4.2e-06	0
+bin	4.3e-06	0
+bin	4.4e-06	0
+bin	4.5e-06	0
+bin	4.6e-06	0
+bin	4.7e-06	0
+scalar BgpNetwork.Barcelona.ppp[1].ppp.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Barcelona.ppp[1].ppp.queue queueLength:timeavg 1.9e-06
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Barcelona.ppp[1].ppp.queue packetPushed:count 7
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Barcelona.ppp[1].ppp.queue packetPushed:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[1].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Barcelona.ppp[1].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[1].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Barcelona.ppp[1].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[1].ppp transmissionState:timeavg 4.9e-07
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Barcelona.ppp[1].ppp rxPkOk:count 6
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Barcelona.ppp[1].ppp rxPkOk:sum(packetBytes) 3.4e+02
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[1].ppp txPk:count 7
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Barcelona.ppp[1].ppp txPk:sum(packetBytes) 3.8e+02
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[1].ppp rcvdPkFromHl:count 7
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Barcelona.ppp[1].ppp rcvdPkFromHl:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[1].ppp passedUpPk:count 6
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Barcelona.ppp[1].ppp passedUpPk:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[1].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Barcelona.ppp[1].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Barcelona.ppp[1].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Barcelona.ppp[1].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Madrid.bgp OPENMsgSent 2
+scalar BgpNetwork.Madrid.bgp OPENMsgRecv 2
+scalar BgpNetwork.Madrid.bgp KeepAliveMsgSent 2
+scalar BgpNetwork.Madrid.bgp KeepAliveMsgRcv 2
+scalar BgpNetwork.Madrid.bgp UpdateMsgSent 0
+scalar BgpNetwork.Madrid.bgp UpdateMsgRcv 0
+scalar BgpNetwork.Madrid.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BgpNetwork.Madrid.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BgpNetwork.Madrid.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BgpNetwork.Madrid.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BgpNetwork.Madrid.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BgpNetwork.Madrid.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BgpNetwork.Madrid.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar BgpNetwork.Madrid.ipv4.arp arpResolutionCompleted:count 0
+attr title "ARP completed resolutions, count"
+scalar BgpNetwork.Madrid.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar BgpNetwork.Madrid.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BgpNetwork.Madrid.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BgpNetwork.Madrid.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[0].ppp.queue packetPopped:count 6
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Madrid.ppp[0].ppp.queue packetPopped:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Madrid.ppp[0].ppp.queue queueingTime:histogram
+field count 6
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	6
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar BgpNetwork.Madrid.ppp[0].ppp.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Madrid.ppp[0].ppp.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Madrid.ppp[0].ppp.queue packetPushed:count 6
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Madrid.ppp[0].ppp.queue packetPushed:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[0].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Madrid.ppp[0].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[0].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Madrid.ppp[0].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[0].ppp transmissionState:timeavg 4.4e-07
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Madrid.ppp[0].ppp rxPkOk:count 7
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Madrid.ppp[0].ppp rxPkOk:sum(packetBytes) 3.8e+02
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[0].ppp txPk:count 6
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Madrid.ppp[0].ppp txPk:sum(packetBytes) 3.4e+02
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[0].ppp rcvdPkFromHl:count 6
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Madrid.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[0].ppp passedUpPk:count 7
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Madrid.ppp[0].ppp passedUpPk:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[0].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Madrid.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[0].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Madrid.ppp[0].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[1].ppp.queue packetPopped:count 7
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Madrid.ppp[1].ppp.queue packetPopped:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Madrid.ppp[1].ppp.queue queueingTime:histogram
+field count 7
+field mean 5.4e-07
+field stddev 1.4e-06
+field min 0
+field max 3.8e-06
+field sum 3.8e-06
+field sqrsum 1.4e-11
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	6
+bin	1e-07	0
+bin	2e-07	0
+bin	3e-07	0
+bin	4e-07	0
+bin	5e-07	0
+bin	6e-07	0
+bin	7e-07	0
+bin	8e-07	0
+bin	9e-07	0
+bin	1e-06	0
+bin	1.1e-06	0
+bin	1.2e-06	0
+bin	1.3e-06	0
+bin	1.4e-06	0
+bin	1.5e-06	0
+bin	1.6e-06	0
+bin	1.7e-06	0
+bin	1.8e-06	0
+bin	1.9e-06	0
+bin	2e-06	0
+bin	2.1e-06	0
+bin	2.2e-06	0
+bin	2.3e-06	0
+bin	2.4e-06	0
+bin	2.5e-06	0
+bin	2.6e-06	0
+bin	2.7e-06	0
+bin	2.8e-06	0
+bin	2.9e-06	0
+bin	3e-06	0
+bin	3.1e-06	0
+bin	3.2e-06	0
+bin	3.3e-06	0
+bin	3.4e-06	0
+bin	3.5e-06	0
+bin	3.6e-06	0
+bin	3.7e-06	1
+bin	3.8e-06	0
+bin	3.9e-06	0
+bin	4e-06	0
+bin	4.1e-06	0
+bin	4.2e-06	0
+bin	4.3e-06	0
+bin	4.4e-06	0
+bin	4.5e-06	0
+bin	4.6e-06	0
+bin	4.7e-06	0
+scalar BgpNetwork.Madrid.ppp[1].ppp.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Madrid.ppp[1].ppp.queue queueLength:timeavg 3.8e-06
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Madrid.ppp[1].ppp.queue packetPushed:count 7
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Madrid.ppp[1].ppp.queue packetPushed:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[1].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Madrid.ppp[1].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[1].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Madrid.ppp[1].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[1].ppp transmissionState:timeavg 4.9e-07
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Madrid.ppp[1].ppp rxPkOk:count 6
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Madrid.ppp[1].ppp rxPkOk:sum(packetBytes) 3.4e+02
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[1].ppp txPk:count 7
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Madrid.ppp[1].ppp txPk:sum(packetBytes) 3.8e+02
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[1].ppp rcvdPkFromHl:count 7
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Madrid.ppp[1].ppp rcvdPkFromHl:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[1].ppp passedUpPk:count 6
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Madrid.ppp[1].ppp passedUpPk:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[1].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Madrid.ppp[1].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[1].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Madrid.ppp[1].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[2].ppp.queue packetPopped:count 1
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Madrid.ppp[2].ppp.queue packetPopped:sum(packetBytes) 44
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Madrid.ppp[2].ppp.queue queueingTime:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar BgpNetwork.Madrid.ppp[2].ppp.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Madrid.ppp[2].ppp.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Madrid.ppp[2].ppp.queue packetPushed:count 1
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Madrid.ppp[2].ppp.queue packetPushed:sum(packetBytes) 44
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[2].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Madrid.ppp[2].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[2].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Madrid.ppp[2].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[2].ppp transmissionState:timeavg 0
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Madrid.ppp[2].ppp rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Madrid.ppp[2].ppp rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[2].ppp txPk:count 1
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Madrid.ppp[2].ppp txPk:sum(packetBytes) 51
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[2].ppp rcvdPkFromHl:count 1
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Madrid.ppp[2].ppp rcvdPkFromHl:sum(packetBytes) 44
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[2].ppp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Madrid.ppp[2].ppp passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[2].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Madrid.ppp[2].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Madrid.ppp[2].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Madrid.ppp[2].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.bgp OPENMsgSent 1
+scalar BgpNetwork.Lisbon.bgp OPENMsgRecv 1
+scalar BgpNetwork.Lisbon.bgp KeepAliveMsgSent 1
+scalar BgpNetwork.Lisbon.bgp KeepAliveMsgRcv 1
+scalar BgpNetwork.Lisbon.bgp UpdateMsgSent 0
+scalar BgpNetwork.Lisbon.bgp UpdateMsgRcv 0
+scalar BgpNetwork.Lisbon.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BgpNetwork.Lisbon.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BgpNetwork.Lisbon.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BgpNetwork.Lisbon.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BgpNetwork.Lisbon.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BgpNetwork.Lisbon.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BgpNetwork.Lisbon.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar BgpNetwork.Lisbon.ipv4.arp arpResolutionCompleted:count 0
+attr title "ARP completed resolutions, count"
+scalar BgpNetwork.Lisbon.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar BgpNetwork.Lisbon.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BgpNetwork.Lisbon.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BgpNetwork.Lisbon.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ppp[0].ppp.queue packetPopped:count 6
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Lisbon.ppp[0].ppp.queue packetPopped:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Lisbon.ppp[0].ppp.queue queueingTime:histogram
+field count 6
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	6
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar BgpNetwork.Lisbon.ppp[0].ppp.queue queueLength:max 1
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Lisbon.ppp[0].ppp.queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Lisbon.ppp[0].ppp.queue packetPushed:count 6
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Lisbon.ppp[0].ppp.queue packetPushed:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ppp[0].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Lisbon.ppp[0].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ppp[0].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Lisbon.ppp[0].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ppp[0].ppp transmissionState:timeavg 4.4e-07
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Lisbon.ppp[0].ppp rxPkOk:count 7
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Lisbon.ppp[0].ppp rxPkOk:sum(packetBytes) 3.8e+02
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ppp[0].ppp txPk:count 6
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Lisbon.ppp[0].ppp txPk:sum(packetBytes) 3.4e+02
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ppp[0].ppp rcvdPkFromHl:count 6
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Lisbon.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 3e+02
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ppp[0].ppp passedUpPk:count 7
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Lisbon.ppp[0].ppp passedUpPk:sum(packetBytes) 3.3e+02
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ppp[0].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Lisbon.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Lisbon.ppp[0].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Lisbon.ppp[0].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.bgp OPENMsgSent 0
+scalar BgpNetwork.Edinburgh.bgp OPENMsgRecv 0
+scalar BgpNetwork.Edinburgh.bgp KeepAliveMsgSent 0
+scalar BgpNetwork.Edinburgh.bgp KeepAliveMsgRcv 0
+scalar BgpNetwork.Edinburgh.bgp UpdateMsgSent 0
+scalar BgpNetwork.Edinburgh.bgp UpdateMsgRcv 0
+scalar BgpNetwork.Edinburgh.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BgpNetwork.Edinburgh.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BgpNetwork.Edinburgh.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BgpNetwork.Edinburgh.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BgpNetwork.Edinburgh.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BgpNetwork.Edinburgh.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BgpNetwork.Edinburgh.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar BgpNetwork.Edinburgh.ipv4.arp arpResolutionCompleted:count 0
+attr title "ARP completed resolutions, count"
+scalar BgpNetwork.Edinburgh.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar BgpNetwork.Edinburgh.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BgpNetwork.Edinburgh.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BgpNetwork.Edinburgh.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Edinburgh.ppp[0].ppp.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BgpNetwork.Edinburgh.ppp[0].ppp.queue queueLength:max -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp transmissionState:timeavg 0
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Edinburgh.ppp[0].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Leeds.bgp OPENMsgSent 0
+scalar BgpNetwork.Leeds.bgp OPENMsgRecv 0
+scalar BgpNetwork.Leeds.bgp KeepAliveMsgSent 0
+scalar BgpNetwork.Leeds.bgp KeepAliveMsgRcv 0
+scalar BgpNetwork.Leeds.bgp UpdateMsgSent 0
+scalar BgpNetwork.Leeds.bgp UpdateMsgRcv 0
+scalar BgpNetwork.Leeds.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BgpNetwork.Leeds.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BgpNetwork.Leeds.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BgpNetwork.Leeds.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BgpNetwork.Leeds.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BgpNetwork.Leeds.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BgpNetwork.Leeds.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar BgpNetwork.Leeds.ipv4.arp arpResolutionCompleted:count 0
+attr title "ARP completed resolutions, count"
+scalar BgpNetwork.Leeds.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar BgpNetwork.Leeds.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BgpNetwork.Leeds.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BgpNetwork.Leeds.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ppp[0].ppp.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Leeds.ppp[0].ppp.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Leeds.ppp[0].ppp.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BgpNetwork.Leeds.ppp[0].ppp.queue queueLength:max -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Leeds.ppp[0].ppp.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Leeds.ppp[0].ppp.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Leeds.ppp[0].ppp.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ppp[0].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Leeds.ppp[0].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ppp[0].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Leeds.ppp[0].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ppp[0].ppp transmissionState:timeavg 0
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Leeds.ppp[0].ppp rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Leeds.ppp[0].ppp rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ppp[0].ppp txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Leeds.ppp[0].ppp txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ppp[0].ppp rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Leeds.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ppp[0].ppp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Leeds.ppp[0].ppp passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ppp[0].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Leeds.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Leeds.ppp[0].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Leeds.ppp[0].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.bgp OPENMsgSent 0
+scalar BgpNetwork.Bratislava.bgp OPENMsgRecv 0
+scalar BgpNetwork.Bratislava.bgp KeepAliveMsgSent 0
+scalar BgpNetwork.Bratislava.bgp KeepAliveMsgRcv 0
+scalar BgpNetwork.Bratislava.bgp UpdateMsgSent 0
+scalar BgpNetwork.Bratislava.bgp UpdateMsgRcv 0
+scalar BgpNetwork.Bratislava.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BgpNetwork.Bratislava.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BgpNetwork.Bratislava.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BgpNetwork.Bratislava.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BgpNetwork.Bratislava.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BgpNetwork.Bratislava.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BgpNetwork.Bratislava.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar BgpNetwork.Bratislava.ipv4.arp arpResolutionCompleted:count 0
+attr title "ARP completed resolutions, count"
+scalar BgpNetwork.Bratislava.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar BgpNetwork.Bratislava.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BgpNetwork.Bratislava.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BgpNetwork.Bratislava.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ppp[0].ppp.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar BgpNetwork.Bratislava.ppp[0].ppp.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic BgpNetwork.Bratislava.ppp[0].ppp.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BgpNetwork.Bratislava.ppp[0].ppp.queue queueLength:max -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar BgpNetwork.Bratislava.ppp[0].ppp.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar BgpNetwork.Bratislava.ppp[0].ppp.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar BgpNetwork.Bratislava.ppp[0].ppp.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ppp[0].ppp.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BgpNetwork.Bratislava.ppp[0].ppp.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ppp[0].ppp.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar BgpNetwork.Bratislava.ppp[0].ppp.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ppp[0].ppp transmissionState:timeavg 0
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+scalar BgpNetwork.Bratislava.ppp[0].ppp rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BgpNetwork.Bratislava.ppp[0].ppp rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ppp[0].ppp txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BgpNetwork.Bratislava.ppp[0].ppp txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ppp[0].ppp rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BgpNetwork.Bratislava.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ppp[0].ppp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BgpNetwork.Bratislava.ppp[0].ppp passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ppp[0].ppp packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BgpNetwork.Bratislava.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BgpNetwork.Bratislava.ppp[0].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BgpNetwork.Bratislava.ppp[0].ppp packetDropInterfaceDown:sum(packetBytes) 0
 attr interpolationmode none
 attr source packetDropReasonIsInterfaceDown(packetDropped)
 attr title "packet drop: interface down, sum(packetBytes)"
