@@ -16,5 +16,5 @@
 /transportlayer/
 /visualizer/
 /applications/
+*/.qtenvrc
 .qtenvrc
-**/*/.qtenvrc
